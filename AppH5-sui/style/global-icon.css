@@ -1,0 +1,140 @@
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+.global-icon{
+    vertical-align: middle;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-image: url("../images/global-280.png");
+    margin-top: -0.2rem;
+    transform: scale(0.6, 0.6);
+}
+.header-back-icon{
+    background-position: 0px 0px;
+}
+.header-menu-icon{
+    background-position: -35px 0px;
+}
+.share-icon{
+    background-position: -70px 0px;
+}
+.comment-icon{
+    background-position: -105px 0;
+}
+.favourite-icon{
+    background-position: -140px 0;
+}
+.favourite-on-icon{
+    background-position: -175px 0;
+}
+.search-icon{
+    background-position: -210px 0;
+}
+.more-icon{
+    background-position: -245px 0;
+}
+
+
+.header-rm-icon{
+    background-position: 0 -72px;
+}
+.header-rm-on-icon{
+    background-position: 0 -35px;
+}
+.header-tj-icon{
+    background-position: -35px -72px;
+}
+.header-tj-on-icon{
+    background-position: -35px -35px;
+}
+.header-my-icon{
+    background-position: -70px -72px;
+}
+.header-my-on-icon{
+    background-position: -70px -35px;
+}
+.header-gz-icon{
+    background-position: -105px -72px;
+}
+.header-gz-on-icon{
+    background-position: -105px -35px;
+}
+.header-all-icon{
+    background-position: -140px -72px;
+}
+.header-all-on-icon{
+    background-position: -140px -35px;
+}
+.header-dy-icon{
+    background-position: -175px -72px;
+}
+.header-dy-on-icon{
+    background-position: -175px -35px;
+}
+.header-yw-icon{
+    background-position: -210px -72px;
+}
+.header-yw-on-icon{
+    background-position: -210px -35px;
+}
+.header-jx-icon{
+    background-position: -245px -72px;
+}
+.header-jx-on-icon{
+    background-position: -245px -35px;
+}
+
+.content-wd-icon{
+    background-position: 0 -107px;
+}
+.content-gz-icon{
+    background-position: -35px -107px;
+}
+.content-cy-icon{
+    background-position: -70px -107px;
+}
+.content-more-icon{
+    background-position: -105px -107px;
+}
+.content-select-icon {
+    background-position: -145px -116px;
+    height: 17px;
+    width: 25px;
+}
+.content-add-icon{
+    background-position: -175px -107px;
+}
+.content-zan-icon{
+    background-position: -210px -107px;
+}
+.content-rm-icon{
+    background-position: -245px -107px;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+.base-icon{
+    vertical-align: middle;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background-image: url("../images/global-250.png");
+    margin-top: -0.2rem;
+    transform: scale(0.6, 0.6);
+}
+.base-tj-icon{
+    background-position: -203px -22px;
+}
+.base-look-icon{
+    background-position: -5px 0;
+    width: 20px;
+    height: 20px;
+}
+.base-comm-icon{
+    background-position: -40px 0;
+    width: 20px;
+    height: 20px;
+}
+.base-join-icon{
+    background-position: -75px 0;
+    width: 20px;
+    height: 20px;
+}

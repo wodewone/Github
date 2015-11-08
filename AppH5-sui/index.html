@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>My App</title>
+    <link rel="stylesheet" href="//g.alicdn.com/sui-mobile/sm/0.5.1/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/sui-mobile/sm/0.5.1/css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <style>
+
+        /*------------------- global ------------------*/
+        .text-center{
+            text-align: center;
+        }
+
+
+        /*-------------------- header -------------------*/
+        .main-bar{
+            height: 4rem;
+        }
+        .main-bar .title{
+            color: #fff;
+        }
+        .bar{
+            background: #242930;
+        }
+        header.bar .bar:before, header.bar .bar:after{
+            background: none;
+        }
+        .sub-bar{
+            bottom: 0;
+            height: 2rem;
+        }
+        .sub-bar a.tab-item{
+            color: #fff;
+            height: 2rem;
+        }
+        .sub-bar a.tab-item.active{
+            color: #ffc40e;
+            border-bottom: 4px solid #ffc40e;
+        }
+        .sub-bar a.tab-item.active .global-icon{
+            background-position: 0 -35px;
+        }
+
+
+        /*------------ content --------------*/
+        .bar-nav ~ .content{
+            top: 4rem;
+            background: #dbdfe4;
+        }
+        .main-content .card{
+            margin: 0.5rem 0;
+        }
+        .main-content .card .card-header:before, .main-content .card .card-header:after{
+            content: '';
+            display: none;
+        }
+        .main-card-title{
+            margin: 0;
+            width: 100%;
+        }
+        .main-content .card-content-inner{
+            padding: 0 0.5rem;
+        }
+
+        .media-box .media-body{
+            overflow: hidden;
+        }
+        .media-left, .media > .pull-left {
+            padding-right: 0.3rem;
+        }
+        .media-right, .media > .pull-right {
+            padding-left: 0.3rem;
+        }
+        .media-body, .media-left, .media-right {
+            display: table-cell;
+            vertical-align: top;
+        }
+        .media-content p{
+            margin: 0;
+        }
+        .media-box img{
+            max-width: 5rem;
+        }
+        .media-box .media-img{
+            width: 3rem;
+            height: 3rem;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav main-bar">
+        <a class="button button-link button-nav pull-left" href="javascript:;"><i class="global-icon header-back-icon"></i></a>
+        <a class="button button-link button-nav pull-right" href="javascript:;"><i class="global-icon header-menu-icon"></i></a>
+        <h1 class="title">话题</h1>
+        <div class="bar bar-tab sub-bar">
+            <a class="tab-item active" href="javascript:;"><i class="global-icon header-rm-icon"></i>热门</span></a>
+            <a class="tab-item" href="javascript:;"><i class="global-icon header-tj-icon"></i>推荐</span></a>
+            <a class="tab-item" href="javascript:;"><i class="global-icon header-my-icon"></i>我的</span></a>
+        </div>
+    </header>
+    <nav class="bar bar-tab">
+        <a class="tab-item active" href="#">
+            <span class="icon icon-home"></span>
+            <span class="tab-label">首页</span>
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-me"></span>
+            <span class="tab-label">我</span>
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-star"></span>
+            <span class="tab-label">收藏</span>
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-settings"></span>
+            <span class="tab-label">设置</span>
+        </a>
+    </nav>
+    <div class="content">
+        <!-- 这里是页面内容区 -->
+        <div class="main-content">
+            <div class="card">
+                <div class="card-header">
+                    <p class="text-center main-card-title"><i class="base-icon base-tj-icon"></i>创建话题</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p class="text-center main-card-title"><i class="global-icon content-wd-icon"></i>创建话题</p>
+                </div>
+                <div class="card-content">
+                    <div class="card-content-inner">
+                        <div class="media-box">
+                            <div class="media-left">
+                                <img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>
+                            </div>
+                            <div class="media-body">
+                                <div class="media-header">#云生活巨优惠# <span class="tag-sp">活动</span></div>
+                                <div class="media-content">
+                                    <p>晕扫地机爱是妒忌啊死哦大劫案送到家激动啊奇偶 asdasdsaasdasSD 萨达撒手大赛</p>
+                                </div>
+                                <div class="media-tag-group">
+                                    <div class="row no">
+                                        <div class="col-33">
+                                            <i class="base-icon base-look-icon"></i>99k阅读
+                                        </div>
+                                        <div class="col-33">
+                                            <i class="base-icon base-comm-icon"></i>1k讨论
+                                        </div>
+                                        <div class="col-33">
+                                            <i class="base-icon base-join-icon"></i>300参与
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media-bottom">
+                            <div class="media-box">
+                                <div class="media-left">
+                                    <p></p>
+                                </div>
+                                <div class="media-body">
+                                    <div class="join-user-box">
+                                        <a class="media-img" href="javascript:;"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="look-all">
+                        <p class="text-center">查看全部 > ></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/sui-mobile/sm/0.5.1/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/sui-mobile/sm/0.5.1/js/sm-extend.min.js' charset='utf-8'></script>
+</body>
+</html>
