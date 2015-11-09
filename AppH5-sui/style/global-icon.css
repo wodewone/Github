@@ -7,6 +7,7 @@
     background-image: url("../images/global-280.png");
     margin-top: -0.2rem;
     transform: scale(0.6, 0.6);
+    -webkit-transform: scale(0.6, 0.6);
 }
 .header-back-icon{
     background-position: 0px 0px;
@@ -119,6 +120,7 @@
     background-image: url("../images/global-250.png");
     margin-top: -0.2rem;
     transform: scale(0.6, 0.6);
+    -webkit-transform: scale(0.6, 0.6);
 }
 .base-tj-icon{
     background-position: -203px -22px;
