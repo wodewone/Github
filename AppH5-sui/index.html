@@ -12,8 +12,35 @@
 
     <link rel="stylesheet" href="style/global-icon.css"/>
     <style>
-
+        html,body{
+            color: #242930;
+        }
         /*------------------- global ------------------*/
+        .pad5{
+            padding: 0.5rem;
+        }
+        .no-padding{
+            padding: 0;
+        }
+        .mt5{
+            margin-top: 0.5rem;
+        }
+        .mb5{
+            margin-bottom: 0.5rem;
+        }
+        .ml5{
+            margin-left: 0.5rem;
+        }
+        .mr5{
+            margin-right: 0.5rem;
+        }
+        .no-margin{
+            margin: 0;
+        }
+        .overflow-hidden{
+            overflow: hidden;
+        }
+
         .text-center{
             text-align: center;
         }
@@ -23,17 +50,34 @@
         .small-txt {
             font-size: 0.55rem;
         }
+        .title-padding{
+            padding: 0.5rem 0;
+        }
+        .sub-title-padding{
+            padding: 0.3rem 0;
+        }
+        .sub-line-clamp{
+            position: relative;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+        }
+
         .by-label {
             background-color: #999999;
             border-radius: 0.08rem;
-            color: #ffffff;
             cursor: default;
+            white-space: nowrap;
+            border-radius: 0.08rem;
+            color: #fff;
             display: inline-block;
             font-size: 0.6rem;
             line-height: 0.6rem;
-            padding: 0.01rem 0.3rem;
-            vertical-align: baseline;
-            white-space: nowrap;
+            margin-top: 0.05rem;
+            padding: 0.1rem 0.3rem;
+            vertical-align: text-top;
         }
         .by-label .label-warning {
             background-color: #FDC40E;
@@ -60,7 +104,12 @@
         .by-text-success {
             color: #91C837;
         }
+        .sub-title, a.sub-title{
+            color: #5c6066;
+        }
 
+
+        /*******    media      ******/
         .media-box .media-body{
             overflow: hidden;
         }
@@ -76,6 +125,9 @@
         }
         .media-content p{
             margin: 0;
+        }
+        .media-header{
+            font-size: 0.75rem;
         }
         .media-box img{
             max-width: 5rem;
@@ -138,6 +190,45 @@
             padding: 0 0.5rem;
         }
 
+
+        .media-padding-left-right{
+            padding: 0 0.22rem;
+        }
+        .media .media-bottom{
+            position: relative;
+        }
+        .media .media-bottom:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 15;
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #e7e7e7;
+            -webkit-transform-origin: 50% 100%;
+            -ms-transform-origin: 50% 100%;
+            -o-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+        }
+        .media-sub-p{
+            height: 1.5rem;
+            line-height: 0.75rem;
+            margin: 0.2rem 0;
+            overflow: hidden;;
+        }
+        .page-media-img{
+            width: 5rem;
+            height: 3.8rem;
+        }
+        .media-bottom-title{
+            width: 2.4rem;
+        }
+        .join-user-icon{
+            width: 1.7rem;
+            height: 1.7rem;
+        }
     </style>
 </head>
 <body>
@@ -184,45 +275,45 @@
                 </div>
                 <div class="card-content">
                     <div class="card-content-inner">
-                        <div class="media-box">
+                        <div class="media media-padding-left-right">
                             <div class="media-left">
-                                <img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>
+                                <img class="page-media-img" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>
                             </div>
                             <div class="media-body">
                                 <div class="media-header">#云生活巨优惠# <span class="tag-sp">活动</span></div>
                                 <div class="media-content">
-                                    <p>晕扫地机爱是妒忌啊死哦大劫案送到家激动啊奇偶 asdasdsaasdasSD 萨达撒手大赛</p>
+                                    <p class="sub-title sub-line-clamp no-margin media-sub-p">晕扫地机爱是妒忌啊死哦大劫案送到家激动啊奇偶 asdasdsaasdasSD 萨达撒手大赛</p>
                                 </div>
                                 <div class="media-tag-group">
-                                    <div class="row no">
-                                        <div class="col-33">
+                                    <div class="row no-gutter">
+                                        <div class="col-33 text-gray small-txt">
                                             <i class="base-icon base-look-icon"></i>99k阅读
                                         </div>
-                                        <div class="col-33">
+                                        <div class="col-33 text-gray small-txt">
                                             <i class="base-icon base-comm-icon"></i>1k讨论
                                         </div>
-                                        <div class="col-33">
+                                        <div class="col-33 text-gray small-txt">
                                             <i class="base-icon base-join-icon"></i>300参与
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="media-bottom">
-                            <div class="media-box">
+                        <div class="media-bottom media-padding-left-right">
+                            <div class="media-box title-padding">
                                 <div class="media-left">
-                                    <p></p>
+                                    <p class="sub-title media-bottom-title">他们都在参与</p>
                                 </div>
                                 <div class="media-body">
                                     <div class="join-user-box">
-                                        <a class="media-img" href="javascript:;"></a>
+                                        <a class="media-img join-user-icon" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="look-all">
-                        <p class="text-center">查看全部 > ></p>
+                    <div class="look-all overflow-hidden">
+                        <a class="text-center title-padding sub-title" href="javascript:;">查看全部 > ></a>
                     </div>
                 </div>
             </div>
