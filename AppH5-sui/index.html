@@ -110,7 +110,7 @@
 
 
         /*******    media      ******/
-        .media-box .media-body{
+        .media .media-body{
             overflow: hidden;
         }
         .media .media-left, .media > .pull-left {
@@ -123,18 +123,14 @@
             display: table-cell;
             vertical-align: top;
         }
-        .media-content p{
-            margin: 0;
-        }
         .media-header{
             font-size: 0.75rem;
         }
-        .media-box img{
+        .media img{
             max-width: 5rem;
+            width: 100%;
         }
-        .media-box .media-img{
-            width: 3rem;
-            height: 3rem;
+        .media .media-img{
             -webkit-border-radius: 50%;
             -moz-border-radius: 50%;
             border-radius: 50%;
@@ -194,10 +190,11 @@
         .media-padding-left-right{
             padding: 0 0.22rem;
         }
-        .media .media-bottom{
+        .media-bottom{
             position: relative;
+            padding-right: 1rem;
         }
-        .media .media-bottom:before{
+        .media-bottom:before{
             content: '';
             position: absolute;
             top: 0;
@@ -212,6 +209,11 @@
             -o-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
         }
+        .media-bottom .more{
+            position: absolute;
+            top: 0.8rem;
+            right: 0.3rem;
+        }
         .media-sub-p{
             height: 1.5rem;
             line-height: 0.75rem;
@@ -224,10 +226,17 @@
         }
         .media-bottom-title{
             width: 2.4rem;
+            margin: 0;
         }
         .join-user-icon{
             width: 1.7rem;
             height: 1.7rem;
+        }
+        .bottom-btn-group{
+            background: #f7f7f7;
+        }
+        a.look-all{
+            display: inline-block;
         }
     </style>
 </head>
@@ -300,20 +309,24 @@
                             </div>
                         </div>
                         <div class="media-bottom media-padding-left-right">
-                            <div class="media-box title-padding">
+                            <div class="media title-padding">
                                 <div class="media-left">
                                     <p class="sub-title media-bottom-title">他们都在参与</p>
                                 </div>
                                 <div class="media-body">
                                     <div class="join-user-box">
-                                        <a class="media-img join-user-icon" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
+                                        <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
+                                        <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
+                                        <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
+                                        <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
                                     </div>
                                 </div>
                             </div>
+                            <i class="global-icon content-more-icon more"></i>
                         </div>
                     </div>
-                    <div class="look-all overflow-hidden">
-                        <a class="text-center title-padding sub-title" href="javascript:;">查看全部 > ></a>
+                    <div class="overflow-hidden bottom-btn-group">
+                        <a class="text-center title-padding sub-title look-all" href="javascript:;">查看全部 > ></a>
                     </div>
                 </div>
             </div>
