@@ -1,0 +1,26 @@
+/*-------------------- header -------------------*/
+.main-bar{
+    height: 4rem;
+}
+.main-bar .title{
+    color: #fff;
+}
+.bar{
+    background: #242930;
+}
+header.bar .bar:before, header.bar .bar:after{
+    background: none;
+}
+.sub-bar{
+    bottom: 0;
+    height: 2rem;
+}
+.sub-bar a.tab-item{
+    color: #fff;
+    height: 2rem;
+    border-bottom: 4px solid transparent;
+}
+.sub-bar a.tab-item.active{
+    color: #ffc40e;
+    border-bottom: 4px solid #ffc40e;
+}

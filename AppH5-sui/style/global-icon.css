@@ -38,49 +38,49 @@
 .header-rm-icon{
     background-position: 0 -72px;
 }
-.header-rm-on-icon{
+.active .header-rm-icon{
     background-position: 0 -35px;
 }
 .header-tj-icon{
     background-position: -35px -72px;
 }
-.header-tj-on-icon{
+.active .header-tj-icon{
     background-position: -35px -35px;
 }
 .header-my-icon{
     background-position: -70px -72px;
 }
-.header-my-on-icon{
+.active .header-my-icon{
     background-position: -70px -35px;
 }
 .header-gz-icon{
     background-position: -105px -72px;
 }
-.header-gz-on-icon{
+.active .header-gz-icon{
     background-position: -105px -35px;
 }
 .header-all-icon{
     background-position: -140px -72px;
 }
-.header-all-on-icon{
+.active .header-all-icon{
     background-position: -140px -35px;
 }
 .header-dy-icon{
     background-position: -175px -72px;
 }
-.header-dy-on-icon{
+.active .header-dy-icon{
     background-position: -175px -35px;
 }
 .header-yw-icon{
     background-position: -210px -72px;
 }
-.header-yw-on-icon{
+.active .header-yw-icon{
     background-position: -210px -35px;
 }
 .header-jx-icon{
     background-position: -245px -72px;
 }
-.header-jx-on-icon{
+.active .header-jx-icon{
     background-position: -245px -35px;
 }
 
