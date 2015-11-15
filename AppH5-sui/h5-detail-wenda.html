@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>问答详情</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        .base-look-icon, .base-comm-icon{
+            transform: scale(0.9, 0.9);
+            -webkit-transform: scale(0.9, 0.9);
+        }
+        a.favourite-btn{
+            color: #fff;
+            padding: 0.1rem 0.3rem;
+        }
+        a.favourite-btn .icon{
+            width: 0.68rem;
+            margin-right: 0.2rem;
+        }
+        .article-menu{
+            margin: 0.5rem 0;
+            padding: 0.3rem 0;
+        }
+        .article-menu .menu-icon{
+            width: 1rem;
+            margin-top: -0.1rem;
+            margin-right: 0.3rem;
+            vertical-align: middle;
+        }
+        .article-menu .tab-item span{
+            display: block;
+            width: 100%;
+        }
+        .article-menu .tab-item:first-child span{
+            border-right-width: 1px;
+            border-right-style: solid;
+            border-color: inherit;
+        }
+        .common-list-box{
+            padding: 0.3rem 0.5rem;
+        }
+        .common-list .card{
+            box-shadow: none;
+        }
+        .user-header{
+            height: 1.5rem;
+            line-height: 1.5rem;
+        }
+        .user-header-inner{
+            position: absolute;
+            width: 100%;
+        }
+        .user-name{
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-right: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav main-bar">
+        <a class="button button-link button-nav pull-left" href="javascript:;"><i class="global-icon header-back-icon"></i></a>
+        <a class="button button-link button-nav pull-right" href="javascript:;"><i class="global-icon header-menu-icon"></i></a>
+        <h1 class="title">共6个回答</h1>
+        <div class="bar bar-tab sub-bar">
+            <a class="tab-item active" href="javascript:;"><i class="global-icon header-rm-icon"></i>热门</a>
+            <a class="tab-item" href="javascript:;"><i class="global-icon header-tj-icon"></i>推荐</a>
+            <a class="tab-item" href="javascript:;"><i class="global-icon header-my-icon"></i>我的</a>
+        </div>
+    </header>
+    <div class="content">
+        <div class="main-content">
+            <div class="article-content white-bg overflow-hidden pad5">
+                <div class="mb5 pt5">
+                    <p class="article-title dividing-after media-padding-left-right pb5">股票大跌，人民币贬值，一带一路，房价趋稳，未来5年内中国经济如何变化？</p>
+                </div>
+                <div class="mb5">
+                    <p class="article-info media-padding-left-right">一方面，中国开出了雄心勃勃的东方马歇尔计划，一带一路和亚投行明显就是把国内过分的产能丢出去，在全球和美元进行对抗，形成rmb主导的市场体系，另一方面，计划还没开始，国内就面临巨大的经济下行压力。</p>
+                </div>
+                <div class="mb5 media-padding-left-right pb5">
+                    <div class="row">
+                        <div class="col-60">
+                            <div class="row">
+                                <div class="col-50 text-gray small-title text-hidden">
+                                    <i class="base-icon base-look-icon"></i>99k阅读
+                                </div>
+                                <div class="col-50 text-gray small-title text-hidden">
+                                    <i class="base-icon base-comm-icon"></i>1k讨论
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-40">
+                            <a class="btn pull-right m-bg small-title small-radius favourite-btn" href="javascript:;"><img class="icon" src="images/favourite-icon.png"/>收藏</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="article-menu white-bg">
+                <div class="bar-tab">
+                    <a class="tab-item m-border-color" href="javascript:;"><span class="m-color"><img class="menu-icon" src="images/wenda/detail-2.png"/>邀请回答</span></a>
+                    <a class="tab-item m-border-color" href="javascript:;"><span class="m-color"><img class="menu-icon" src="images/wenda/detail-1.png"/>添加回答</span></a>
+                </div>
+            </div>
+            <div class="white-bg common-list-box">
+                <div class="common-list">
+                    <div class="card dividing-after">
+                        <div class="card-content-box">
+                            <div class="card-content pb5">
+                                <div class="media media-padding-left-right">
+                                    <div class="media-left">
+                                        <img class="media-img" width="45" height="45" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>
+                                        <div class="text-center">
+                                            <a class="by-text-warning zan-btn" href="javascript:;"><i class="global-icon content-zan-icon"></i><span>123</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="user-header">
+                                            <div class="text-hidden user-header-inner">
+                                                <span class="user-name">你是大打</span><span class="sub-title">分析化学研究生食品安全从业人员</span>
+                                            </div>
+                                        </div>
+                                        <div class="media-content">
+                                            <p class="sub-title no-margin">题主这样真诚的问题值得最真诚的回答。我的回答会很长，很多图，和个人思路挂钩严重。 请慎入。我从大一就是金融和投资的爱好者，从大二开始自己买卖股票，毕业了在证券公司工作了两年多…</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card dividing-after">
+                        <div class="card-content-box">
+                            <div class="card-content pb5">
+                                <div class="media media-padding-left-right">
+                                    <div class="media-left">
+                                        <img class="media-img" width="45" height="45" src="images/anonymous-icon.png"/>
+                                        <div class="text-center">
+                                            <a class="by-text-warning zan-btn" href="javascript:;"><i class="global-icon content-zan-icon"></i><span>123</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="user-header">
+                                            <div class="text-hidden user-header-inner">
+                                                <span class="user-name">匿名用户</span><span class="sub-title"></span>
+                                            </div>
+                                        </div>
+                                        <div class="media-content">
+                                            <p class="sub-title no-margin">题主这样真诚的问题值得最真诚的回答。我的回答会很长，很多图，和个人思路挂钩严重。 请慎入。我从大一就是金融和投资的爱好者，从大二开始自己买卖股票，毕业了在证券公司工作了两年多…</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+</body>
+</html>

@@ -24,11 +24,14 @@
 .favourite-icon{
     background-position: -140px 0;
 }
-.favourite-on-icon{
+.active .favourite-icon, .favourite-on-icon{
     background-position: -175px 0;
 }
 .search-icon{
-    background-position: -210px 0;
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/search-icon.png");
+    background-position: 0 0;
 }
 .more-icon{
     background-position: -245px 0;
@@ -115,15 +118,15 @@
 .base-icon{
     vertical-align: middle;
     display: inline-block;
-    width: 44px;
-    height: 44px;
+    width: 46px;
+    height: 46px;
     background-image: url("../images/global-250.png");
-    margin-top: -0.2rem;
     transform: scale(0.6, 0.6);
     -webkit-transform: scale(0.6, 0.6);
 }
 .base-tj-icon{
-    background-position: -203px -22px;
+    margin-top: -0.3rem;
+    background-position: -202px -20px;
 }
 .base-look-icon{
     background-position: -5px 0;
@@ -139,4 +142,17 @@
     background-position: -75px 0;
     width: 20px;
     height: 20px;
+}
+
+.base-home-icon{
+    background-position: 0px -21px;
+}
+.base-star-icon{
+    background-position: -54px -21px;
+}
+.base-mess-icon{
+    background-position: -102px -21px;
+}
+.base-mine-icon{
+    background-position: -152px -21px;
 }

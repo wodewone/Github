@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="theme-color" content="#242930">
-    <title>我的话题</title>
+    <title>话题</title>
     <link rel="stylesheet" href="css/sm.min.css">
     <link rel="stylesheet" href="css/sm-extend.min.css">
 
@@ -22,25 +22,85 @@
         <a class="button button-link button-nav pull-right" href="javascript:;"><i class="global-icon header-menu-icon"></i></a>
         <h1 class="title">话题</h1>
         <div class="bar bar-tab sub-bar">
-            <a class="tab-item" href="javascript:;"><i class="global-icon header-rm-icon"></i>热门</a>
+            <a class="tab-item active" href="javascript:;"><i class="global-icon header-rm-icon"></i>热门</a>
             <a class="tab-item" href="javascript:;"><i class="global-icon header-tj-icon"></i>推荐</a>
-            <a class="tab-item active" href="javascript:;"><i class="global-icon header-my-icon"></i>我的</a>
+            <a class="tab-item" href="javascript:;"><i class="global-icon header-my-icon"></i>我的</a>
         </div>
     </header>
+    <nav class="bar bar-tab pad5 footer-bar">
+        <div class="sub-bar text-center pb5">
+            <a class="tab-item" href="javascript:;"><i class="base-icon base-home-icon"></i><span>首页</span></a>
+            <a class="tab-item" href="javascript:;"><i class="base-icon base-star-icon"></i><span>发现</span></a>
+            <a class="tab-item" href="javascript:;"><i class="base-icon base-mess-icon"></i><span>消息</span></a>
+            <a class="tab-item" href="javascript:;"><i class="base-icon base-mine-icon"></i><span>我的</span></a>
+        </div>
+        <div class="dividing"></div>
+        <a class="btn title-padding text-center" href="javascript:;">取消</a>
+    </nav>
     <div class="content">
         <!-- 这里是页面内容区 -->
         <div class="main-content">
             <div class="card">
-                <div class="card-header">
-                    <p class="text-center main-card-title"><i class="base-icon base-tj-icon"></i>创建话题</p>
+                <div class="card-content-box">
+                    <div class="card-content pt5">
+                        <div class="card-content-inner">
+                            <div class="media media-padding-left-right">
+                                <div class="media-left">
+                                    <img class="page-media-img" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>
+                                </div>
+                                <div class="media-body">
+                                    <div class="media-header media-absolute">
+                                        <div class="media-header-inner">
+                                            <div class="header-title-row">
+                                                <div class="header-title">#云生活巨优惠#</div>
+                                                <span class="by-label label-danger header-title-after">活动</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="sub-title sub-line-clamp no-margin media-sub-p">晕扫地机爱是妒忌啊死哦大劫案送到家激动啊奇偶 asdasdsaasdasSD 萨达撒手大赛</p>
+                                    </div>
+                                    <div class="media-tag-group">
+                                        <div class="row no-gutter">
+                                            <div class="col-33 text-gray small-txt text-hidden">
+                                                <i class="base-icon base-look-icon"></i>99k阅读
+                                            </div>
+                                            <div class="col-33 text-gray small-txt text-hidden">
+                                                <i class="base-icon base-comm-icon"></i>1k讨论
+                                            </div>
+                                            <div class="col-33 text-gray small-txt text-hidden">
+                                                <i class="base-icon base-join-icon"></i>300参与
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="media-bottom media-padding-left-right">
+                                <div class="media title-padding">
+                                    <div class="media-left">
+                                        <p class="sub-title media-bottom-title">他们都在参与</p>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="join-user-box">
+                                            <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
+                                            <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
+                                            <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
+                                            <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
+                                            <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="more">
+                                    <i class="global-icon content-more-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="card">
-                <div class="card-header">
-                    <p class="text-center main-card-title"><i class="global-icon content-wd-icon"></i>我创建的话题</p>
-                </div>
                 <div class="card-content-box">
-                    <div class="card-content">
+                    <div class="card-content pt5">
                         <div class="card-content-inner">
                             <div class="media media-padding-left-right">
                                 <div class="media-left">
@@ -51,7 +111,7 @@
                                         <div class="media-header-inner">
                                             <div class="header-title-row">
                                                 <div class="header-title">#云生活巨优惠#</div>
-                                                <span class="by-label label-danger header-title-after">活动</span>
+                                                <span class="by-label label-warning">段子</span>
                                             </div>
                                         </div>
                                     </div>
@@ -94,17 +154,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="overflow-hidden bottom-btn-group">
-                    <a class="text-center title-padding sub-title look-all" href="javascript:;">查看全部 > ></a>
                 </div>
             </div>
             <div class="card">
-                <div class="card-header">
-                    <p class="text-center main-card-title"><i class="global-icon content-gz-icon"></i>我关注的话题</p>
-                </div>
                 <div class="card-content-box">
-                    <div class="card-content">
+                    <div class="card-content pt5">
                         <div class="card-content-inner">
                             <div class="media media-padding-left-right">
                                 <div class="media-left">
@@ -115,7 +169,7 @@
                                         <div class="media-header-inner">
                                             <div class="header-title-row">
                                                 <div class="header-title">#云生活巨优惠#</div>
-                                                <span class="by-label label-danger header-title-after">活动</span>
+                                                <span class="by-label label-info">产品</span>
                                             </div>
                                         </div>
                                     </div>
@@ -158,127 +212,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-content">
-                        <div class="card-content-inner">
-                            <div class="media media-padding-left-right">
-                                <div class="media-left">
-                                    <img class="page-media-img" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>
-                                </div>
-                                <div class="media-body">
-                                    <div class="media-header media-absolute">
-                                        <div class="media-header-inner">
-                                            <div class="header-title-row">
-                                                <div class="header-title">#云生活巨优惠#</div>
-                                                <span class="by-label label-danger header-title-after">活动</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="media-content">
-                                        <p class="sub-title sub-line-clamp no-margin media-sub-p">晕扫地机爱是妒忌啊死哦大劫案送到家激动啊奇偶 asdasdsaasdasSD 萨达撒手大赛</p>
-                                    </div>
-                                    <div class="media-tag-group">
-                                        <div class="row no-gutter">
-                                            <div class="col-33 text-gray small-txt text-hidden">
-                                                <i class="base-icon base-look-icon"></i>99k阅读
-                                            </div>
-                                            <div class="col-33 text-gray small-txt text-hidden">
-                                                <i class="base-icon base-comm-icon"></i>1k讨论
-                                            </div>
-                                            <div class="col-33 text-gray small-txt text-hidden">
-                                                <i class="base-icon base-join-icon"></i>300参与
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="media-bottom media-padding-left-right">
-                                <div class="media title-padding">
-                                    <div class="media-left">
-                                        <p class="sub-title media-bottom-title">他们都在参与</p>
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="join-user-box">
-                                            <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
-                                            <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
-                                            <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
-                                            <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
-                                            <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="more">
-                                    <i class="global-icon content-more-icon"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="overflow-hidden bottom-btn-group">
-                    <a class="text-center title-padding sub-title look-all" href="javascript:;">查看全部 > ></a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <p class="text-center main-card-title"><i class="global-icon content-cy-icon"></i>我参与的话题</p>
-                </div>
-                <div class="card-content-box">
-                    <div class="card-content">
-                        <div class="card-content-inner">
-                            <div class="media media-padding-left-right">
-                                <div class="media-left">
-                                    <img class="page-media-img" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>
-                                </div>
-                                <div class="media-body">
-                                    <div class="media-header media-absolute">
-                                        <div class="media-header-inner">
-                                            <div class="header-title-row">
-                                                <div class="header-title">#云生活巨优惠#</div>
-                                                <span class="by-label label-danger header-title-after">活动</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="media-content">
-                                        <p class="sub-title sub-line-clamp no-margin media-sub-p">晕扫地机爱是妒忌啊死哦大劫案送到家激动啊奇偶 asdasdsaasdasSD 萨达撒手大赛</p>
-                                    </div>
-                                    <div class="media-tag-group">
-                                        <div class="row no-gutter">
-                                            <div class="col-33 text-gray small-txt text-hidden">
-                                                <i class="base-icon base-look-icon"></i>99k阅读
-                                            </div>
-                                            <div class="col-33 text-gray small-txt text-hidden">
-                                                <i class="base-icon base-comm-icon"></i>1k讨论
-                                            </div>
-                                            <div class="col-33 text-gray small-txt text-hidden">
-                                                <i class="base-icon base-join-icon"></i>300参与
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="media-bottom media-padding-left-right">
-                                <div class="media title-padding">
-                                    <div class="media-left">
-                                        <p class="sub-title media-bottom-title">他们都在参与</p>
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="join-user-box">
-                                            <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
-                                            <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
-                                            <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
-                                            <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
-                                            <a class="media-img join-user-icon mr5" href="javascript:;"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="more">
-                                    <i class="global-icon content-more-icon"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="overflow-hidden bottom-btn-group">
-                    <a class="text-center title-padding sub-title look-all" href="javascript:;">查看全部 > ></a>
                 </div>
             </div>
         </div>

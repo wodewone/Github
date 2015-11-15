@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        input.register-btn{
+            line-height: 1.4rem;
+            color: #fff;
+        }
+        input.check-code-input{
+            padding-right: 6rem;
+        }
+        a.get-code{
+            display: block;
+            position: absolute;
+            top: 0.3rem;
+            right: 0.3rem;
+            line-height: 1.6rem;
+            height: 1.6rem;
+            padding: 0 0.4rem;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left" href="javascript:;"><i class="global-icon header-back-icon"></i></a>
+        <a class="button button-link button-nav pull-right" href="javascript:;">登录</a>
+        <h1 class="title">LOGO</h1>
+    </header>
+    <div class="content">
+        <div class="main-content pad10">
+            <div class="pb5">
+                <input class="control-input" type="tel" placeholder="手机号" />
+            </div>
+            <div class="pb5 mt5">
+                <input class="control-input" type="password" placeholder="密码" />
+                <p class="pl5 small-txt no-margin small-pt">字母、数字或符号，最短8个字符，区分大小写</p>
+            </div>
+            <div class="pb5">
+                <input class="control-input" type="text" placeholder="昵称" />
+                <p class="pl5 small-txt no-margin small-pt">中、英文均可，最长14个英文或7个汉字</p>
+            </div>
+            <div class="pb5 por">
+                <input class="control-input check-code-input" type="tel" placeholder="验证码" />
+                <a class="btn get-code m-active-bg small-radius" href="javascript:;">获取验证码</a>
+            </div>
+            <div class="mt5 pt5">
+                <input class="control-input m-bg register-btn" type="submit" value="注册"/>
+            </div>
+            <p class="pl5 pb5 sub-title">点击“注册”意味着你的同意<a class="by-text-link" href="javascript:;">《使用协议》</a></p>
+            <p class="mt5 pt5"><a class="btn text-center" href="javascript:;">邮箱登录 >></a></p>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>添加问题</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        .control-textarea{
+            padding: 1rem;
+            min-height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav main-bar">
+        <a class="button button-link button-nav pull-left" href="javascript:;">取消</a>
+        <a class="button button-link button-nav pull-right" href="javascript:;">发布</a>
+        <h1 class="title">添加问题</h1>
+        <nav class="white-bg bar bar-tab sub-bar pl5 pr5 menu-tab">
+            <a class="tab-item sub-title active" href="javascript:;">问题</a>
+            <a class="tab-item text-gray" href="javascript:;">描述</a>
+            <div class="dividing-after"></div>
+        </nav>
+    </header>
+    <div class="bar bar-tab pad5 footer-bar m-sub-bg">
+        <input class="input-cb" type="checkbox"/><span class="sub-title">匿名</span>
+    </div>
+    <div class="content white-bg">
+        <textarea class="control-textarea" placeholder="请输入问题（100字以内）"></textarea>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+</body>
+</html>

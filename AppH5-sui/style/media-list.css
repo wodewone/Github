@@ -25,20 +25,30 @@
     padding: 0.7rem 0 0.7rem 2rem;
     right: -0.55rem;
     background: -moz-linear-gradient(right,#FFF 0,rgba(255,255,255,0) 100%);
-    background: -webkit-linear-gradient(top,#FFF 0,#EEE 100%);
-    background: -o-linear-gradient(top,#FFF 0,#EEE 100%);
-    background: -ms-linear-gradient(top,#FFF 0,#EEE 100%);
-    background: linear-gradient(top,#FFF 0,#EEE 100%);
+    background: -webkit-linear-gradient(right,#FFF 0,rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(right,#FFF 0,rgba(255,255,255,0) 100%);
+    background: -ms-linear-gradient(right,#FFF 0,rgba(255,255,255,0) 100%);
+    background: linear-gradient(right,#FFF 0,rgba(255,255,255,0) 100%);
+}
+.media-bottom .media-left{
+    line-height: 1.7rem;
 }
 .media-sub-p{
     height: 1.45rem;
     line-height: 0.75rem;
     margin: 0.2rem 0;
     overflow: hidden;;
+    font-size: 0.7rem;
 }
 .page-media-img{
     width: 5rem;
     height: 3.8rem;
+}
+@media all and (max-width: 320px) {
+    .page-media-img{
+        width: 4rem;
+        height: 3.05rem;
+    }
 }
 .media-bottom-title{
     line-height: 0.8rem;
@@ -47,6 +57,8 @@
 }
 .join-user-box {
     width: 200%;
+    height: 1.7rem;
+    overflow: hidden;
 }
 .join-user-icon{
     display: inline-block;

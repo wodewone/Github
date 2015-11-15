@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>发布动态</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        .content{
+            bottom: 2.5rem;
+        }
+        .main-content{
+            padding-bottom: 2rem;
+        }
+        .up-img-box{
+            width: 100%;
+            height: 20vw;
+            float: left;
+            margin-bottom: 4vw;
+            background-position: center;
+            background-size: 35vmin;
+            background-repeat: no-repeat;
+        }
+        .add-img-btn{
+            width: 100%;
+            height: 20vw;
+            float: left;
+            padding: 25% 0;
+            background-color: #f2f2f3;
+        }
+        .add-img-btn img{
+            width: 50%;
+        }
+        .footer-box{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        .footer-bar a.tab-item{
+            height: 2.5rem;
+            padding: 0.5rem 0;
+        }
+        .footer-bar a.tab-item img{
+            height: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left" href="javascript:;">取消</a>
+        <a class="button button-link button-nav pull-right" href="javascript:;">发送</a>
+        <h1 class="title has-small">发动态<small>潇潇</small></h1>
+    </header>
+    <nav class="bar footer-bar sub-bar bar-tab">
+        <a href="javascript:;" class="tab-item"><img src="images/fabu/fabu-6.png" alt=""/></a>
+        <a href="javascript:;" class="tab-item"><img src="images/fabu/fabu-4.png" alt=""/></a>
+        <a href="javascript:;" class="tab-item"><img src="images/fabu/fabu-2.png" alt=""/></a>
+        <a href="javascript:;" class="tab-item"><img src="images/fabu/fabu-3.png" alt=""/></a>
+        <a href="javascript:;" class="tab-item"><img src="images/fabu/fabu-5.png" alt=""/></a>
+        <a href="javascript:;" class="tab-item"><img src="images/fabu/fabu-1.png" alt=""/></a>
+    </nav>
+    <div class="content white-bg pad5">
+        <div class="main-content por">
+            <textarea class="control-textarea" placeholder="时时处处，分享金融新鲜事儿"></textarea>
+            <div class="img-list">
+                <div class="row">
+                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
+                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
+                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
+                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
+                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
+                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
+                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
+                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
+                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
+                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
+                    <!-- 添加新图片按钮 -->
+                    <div class="col-25"><a href="javascript:;" class="btn add-img-btn text-center"><img src="images/fabu/fabu-7.png" alt=""/></a></div>
+                </div>
+            </div>
+            <div class="footer-box">
+                <div class="label-switch">
+                    <input type="checkbox" checked>
+                    <div class="checkbox">
+                        <span class="switch-title by-text-success">公开</span>
+                    </div>
+                </div>
+                <!--<span class="by-text-success">公开</span>-->
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>长文章</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        .add-cover-btn{
+            background-color: #f2f2f4;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 35vmin;
+            padding: 1.8rem 0;
+        }
+        .add-cover-btn img{
+            width: 2rem;
+        }
+        .control-textarea{
+            top: 10rem;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left" href="javascript:;">取消</a>
+        <a class="button button-link button-nav pull-right" href="javascript:;">完成</a>
+        <h1 class="title has-small">发长文章<small>潇潇</small></h1>
+    </header>
+    <div class="content white-bg pad5">
+        <div class="main-content por">
+            <div class="dividing-after">
+                <input type="text" class="control-input" placeholder="标题" />
+            </div>
+            <div class="mt5 text-center">
+                <a class="btn text-center add-cover-btn" href="javascript:;"><img src="images/cover-img.png"/><p class="text-gray small-pt no-margin">添加封面</p></a>
+            </div>
+            <!--<div class="control-textarea" contentEditable="true">sadda</div>-->
+            <textarea class="control-textarea poa pl5 pr5 mt5" placeholder="正文"></textarea>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+</body>
+</html>
