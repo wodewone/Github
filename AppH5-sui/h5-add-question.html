@@ -15,29 +15,45 @@
     <link rel="stylesheet" href="style/nav-header.css"/>
     <link rel="stylesheet" href="style/media-list.css"/>
     <style>
+        .footer-bar{
+            background: #f3f3f3;
+        }
+        .tabs, .tabs .tab{
+            height: 100%;
+        }
         .control-textarea{
             padding: 1rem;
             min-height: 100%;
+        }
+        a.tab-link.tab-item{
+            color: #888;
         }
     </style>
 </head>
 <body>
 <div class="page">
     <header class="bar bar-nav main-bar">
-        <a class="button button-link button-nav pull-left" href="javascript:;">取消</a>
-        <a class="button button-link button-nav pull-right" href="javascript:;">发布</a>
+        <a class="button button-link button-nav pull-left" href="#">取消</a>
+        <a class="button button-link button-nav pull-right" href="#">发布</a>
         <h1 class="title">添加问题</h1>
         <nav class="white-bg bar bar-tab sub-bar pl5 pr5 menu-tab">
-            <a class="tab-item sub-title active" href="javascript:;">问题</a>
-            <a class="tab-item text-gray" href="javascript:;">描述</a>
+            <a class="tab-item sub-title tab-link active" href="#tab1">问题</a>
+            <a class="tab-item sub-title tab-link" href="#tab2">描述</a>
             <div class="dividing-after"></div>
         </nav>
     </header>
     <div class="bar bar-tab pad5 footer-bar m-sub-bg">
-        <input class="input-cb" type="checkbox"/><span class="sub-title">匿名</span>
+        <input class="input-cb" type="checkbox"/><span class="sub-title ml5">匿名</span>
     </div>
     <div class="content white-bg">
-        <textarea class="control-textarea" placeholder="请输入问题（100字以内）"></textarea>
+        <div class="tabs">
+            <div id="tab1" class="tab active">
+                <textarea class="control-textarea" placeholder="请输入问题（100字以内）"></textarea>
+            </div>
+            <div id="tab2" class="tab">
+                <textarea class="control-textarea" placeholder="请输入描述（100字以内）"></textarea>
+            </div>
+        </div>
     </div>
 </div>
 <script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>

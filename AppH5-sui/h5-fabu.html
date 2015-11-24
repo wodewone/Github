@@ -15,30 +15,39 @@
     <link rel="stylesheet" href="style/nav-header.css"/>
     <link rel="stylesheet" href="style/media-list.css"/>
     <style>
+        .footer-bar{
+            background-color: #f3f3f3;
+        }
         .content{
             bottom: 2.5rem;
         }
         .main-content{
             padding-bottom: 2rem;
         }
-        .up-img-box{
-            width: 100%;
-            height: 20vw;
-            float: left;
-            margin-bottom: 4vw;
-            background-position: center;
-            background-size: 35vmin;
-            background-repeat: no-repeat;
+        .img-list .row{
+            margin-left: -0.5rem;
         }
-        .add-img-btn{
-            width: 100%;
-            height: 20vw;
+        .up-img-box, .add-img-btn{
+            width: 4rem;
+            height: 4rem;
             float: left;
-            padding: 25% 0;
+            margin-left: 0.5rem;
+            margin-bottom: 4vw;
             background-color: #f2f2f3;
         }
+        .up-img-box img{
+            width: 100%;
+            height: 100%;
+        }
+        .add-img-btn{
+            /*width: 100%;*/
+            /*height: 20vw;*/
+            /*float: left;*/
+            padding-top: 1rem;
+            /*background-color: #f2f2f3;*/
+        }
         .add-img-btn img{
-            width: 50%;
+            width: 2rem;
         }
         .footer-box{
             position: absolute;
@@ -58,35 +67,30 @@
 <body>
 <div class="page">
     <header class="bar bar-nav">
-        <a class="button button-link button-nav pull-left" href="javascript:;">取消</a>
-        <a class="button button-link button-nav pull-right" href="javascript:;">发送</a>
+        <a class="button button-link button-nav pull-left" href="#">取消</a>
+        <a class="button button-link button-nav pull-right" href="#">发送</a>
         <h1 class="title has-small">发动态<small>潇潇</small></h1>
     </header>
     <nav class="bar footer-bar sub-bar bar-tab">
-        <a href="javascript:;" class="tab-item"><img src="images/fabu/fabu-6.png" alt=""/></a>
-        <a href="javascript:;" class="tab-item"><img src="images/fabu/fabu-4.png" alt=""/></a>
-        <a href="javascript:;" class="tab-item"><img src="images/fabu/fabu-2.png" alt=""/></a>
-        <a href="javascript:;" class="tab-item"><img src="images/fabu/fabu-3.png" alt=""/></a>
-        <a href="javascript:;" class="tab-item"><img src="images/fabu/fabu-5.png" alt=""/></a>
-        <a href="javascript:;" class="tab-item"><img src="images/fabu/fabu-1.png" alt=""/></a>
+        <a href="#" class="tab-item"><img src="images/fabu/fabu-6.png" alt=""/></a>
+        <a href="#" class="tab-item"><img src="images/fabu/fabu-4.png" alt=""/></a>
+        <a href="#" class="tab-item"><img src="images/fabu/fabu-2.png" alt=""/></a>
+        <a href="#" class="tab-item"><img src="images/fabu/fabu-3.png" alt=""/></a>
+        <a href="#" class="tab-item"><img src="images/fabu/fabu-5.png" alt=""/></a>
+        <a href="#" class="tab-item"><img src="images/fabu/fabu-1.png" alt=""/></a>
     </nav>
     <div class="content white-bg pad5">
         <div class="main-content por">
             <textarea class="control-textarea" placeholder="时时处处，分享金融新鲜事儿"></textarea>
             <div class="img-list">
                 <div class="row">
-                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
-                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
-                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
-                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
-                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
-                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
-                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
-                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
-                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
-                    <div class="col-25"><a href="javascript:;" class="btn up-img-box" style="background-image: url(http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg);"></a></div>
+                    <a href="#" class="btn up-img-box"><img src="http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg"/></a>
+                    <a href="#" class="btn up-img-box"><img src="http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg"/></a>
+                    <a href="#" class="btn up-img-box"><img src="http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg"/></a>
+                    <a href="#" class="btn up-img-box"><img src="http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg"/></a>
+                    <a href="#" class="btn up-img-box"><img src="http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg"/></a>
                     <!-- 添加新图片按钮 -->
-                    <div class="col-25"><a href="javascript:;" class="btn add-img-btn text-center"><img src="images/fabu/fabu-7.png" alt=""/></a></div>
+                    <a href="#" class="btn add-img-btn text-center"><img src="images/fabu/fabu-7.png" alt=""/></a>
                 </div>
             </div>
             <div class="footer-box">
@@ -96,7 +100,6 @@
                         <span class="switch-title by-text-success">公开</span>
                     </div>
                 </div>
-                <!--<span class="by-text-success">公开</span>-->
             </div>
         </div>
     </div>

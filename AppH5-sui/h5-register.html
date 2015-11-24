@@ -37,8 +37,8 @@
 <body>
 <div class="page">
     <header class="bar bar-nav">
-        <a class="button button-link button-nav pull-left" href="javascript:;"><i class="global-icon header-back-icon"></i></a>
-        <a class="button button-link button-nav pull-right" href="javascript:;">登录</a>
+        <a class="button button-link button-nav pull-left back" href="javascript:window.history.go(-1);"><i class="global-icon header-back-icon"></i></a>
+        <a class="button button-link button-nav pull-right" href="#">登录</a>
         <h1 class="title">LOGO</h1>
     </header>
     <div class="content">
@@ -59,15 +59,32 @@
                 <a class="btn get-code m-active-bg small-radius" href="javascript:;">获取验证码</a>
             </div>
             <div class="mt5 pt5">
-                <input class="control-input m-bg register-btn" type="submit" value="注册"/>
+                <input id="register-btn" class="control-input m-bg register-btn" type="submit" value="注册"/>
             </div>
-            <p class="pl5 pb5 sub-title">点击“注册”意味着你的同意<a class="by-text-link" href="javascript:;">《使用协议》</a></p>
-            <p class="mt5 pt5"><a class="btn text-center" href="javascript:;">邮箱登录 >></a></p>
+            <p class="pl5 pb5 sub-title">点击“注册”意味着你的同意<a class="by-text-link open-popup" data-popup=".popup-about">《使用协议》</a></p>
+            <p class="mt5 pt5"><a class="btn text-center" href="">邮箱登录 >></a></p>
         </div>
     </div>
 </div>
+<!-- 使用协议 -->
+<div class="popup popup-about">
+    <div class="content-block">
+        <p class="article-title text-center">《使用协议》<a href="#" class="pull-right close-popup by-text-danger">关闭</a></p>
+        <p class="small-txt">不知道不明了为什么你要跑</p>
+    </div>
+</div>
 <script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script>
+    $.config = {
+        showPageLoadingIndicator: false
+    }
+</script>
 <script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+<script>
+    $('#register-btn').click(function(){
+        alert('woca');
+    });
+</script>
 </body>
 </html>

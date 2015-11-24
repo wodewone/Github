@@ -58,10 +58,10 @@ header.bar .bar:before, header.bar .bar:after{
 
 .footer-bar{
     height: auto;
-    background-color: rgba(240,240,240,0.8);
+    background-color: rgba(36,41,48,0.9);
+    z-index: 999;
 }
 .footer-bar a.tab-item{
-    color: #242930;
     line-height: 0.3rem;
     font-size: 0.6rem;
 }
@@ -114,4 +114,49 @@ header.bar .bar:before, header.bar .bar:after{
 .footer-line-bar:before{
     content: '';
     display: none;
+}
+.footer-menu ~ .content{
+    bottom: 0;
+}
+.footer-menu{
+    z-index: 999;
+    height: 6.3rem;
+    bottom: -7rem;
+    transition: bottom 0.3s;
+}
+.footer-menu.active{
+    bottom: 0;
+}
+.footer-menu .sub-bar{
+    height: 3.5rem;
+}
+.footer-menu a.tab-item{
+    padding-top: 0.15rem;
+    height: 3rem;
+    text-align: center;
+    font-size: 0.7rem;
+}
+.footer-menu .menu-img{
+    display: block;
+    width: 1.5rem;
+    margin: 0.15rem auto;
+}
+a.footer-cancel-btn{
+    color: #fff;
+    position: relative;
+}
+a.footer-cancel-btn:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: -webkit-radial-gradient(#fff,rgba(0,0,0,0) 70%);
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
 }

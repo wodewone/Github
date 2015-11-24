@@ -103,7 +103,7 @@ a.small-btn{
 a.small-btn i.global-icon, a.small-btn i.base-icon{
     margin-right: -0.3rem;
 }
-a.btn{
+a.btn, .btn{
     display: block;
     color: #242930;
 }
@@ -185,21 +185,25 @@ a.btn{
     padding: 0.1rem 0.3rem;
     vertical-align: text-top;
 }
-.by-label.label-warning {
+.label-warning {
     background-color: #FDC40E;
     border-color: #FDC40E;
+    color: #fff;
 }
-.by-label.label-danger {
+.label-danger {
     background-color: #FB6237;
     border-color: #FB6237;
+    color: #fff;
 }
-.by-label.label-info {
+.label-info {
     background-color: #5C86EA;
     border-color: #5C86EA;
+    color: #fff;
 }
-.by-label.label-success {
+.label-success {
     background-color: #91C837;
     border-color: #91C837;
+    color: #fff;
 }
 
 .by-text-warning {
@@ -336,7 +340,7 @@ a.btn{
     background: #dbdfe4;
 }
 .main-content{
-    min-height: 100%;
+    overflow: hidden;
 }
 .main-content .card{
     margin: 0.5rem 0;
@@ -374,6 +378,32 @@ a.btn{
     padding-bottom: 0.3rem;
     font-size: 0.7rem;
 }
+.fixed-layer{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.footer-bar ~ .fixed-layer{
+    bottom: 2.5rem;
+}
+.fixed-btn{
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    position: fixed;
+    bottom: 0.35rem;
+    right: 0.5rem;
+    z-index: 99999;
+}
+.footer-bar ~ .content .fixed-btn{
+    bottom: 2.7rem;
+}
+.fixed-btn img{
+    width: 100%;
+    vertical-align: middle;
+}
 
 .control-input, .search-input .control-input{
     border: none;
@@ -406,4 +436,28 @@ a.search-btn, a.button.search-btn{
     vertical-align: text-top;
     transform: scale(2, 2);
     -webkit-transform: scale(2, 2);
+}
+
+/*    2015-11-16   */
+.no-content{
+    padding: 2rem 0;
+}
+.no-content .no-content-img{
+    width: 6rem;
+}
+
+.media-img-admin{
+    position: relative;
+    overflow: visible;
+}
+.media-img-admin:before{
+    content: '';
+    position: absolute;
+    top: -0.43rem;
+    left: 0;
+    width: 1rem;
+    height: 0.9rem;
+    background: url("../images/admin-icon.png") no-repeat;
+    background-size: 100%;
+    z-index: 999;
 }

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>管理员</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        .button{
+            height: 1.8rem;
+            line-height: 1.8rem;
+            vertical-align: top;
+            width: 4rem;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .list-block ul:after{
+            content: '';
+            display: none;
+        }
+        .list-block .item-title{
+            padding-top: 0.3rem;
+            white-space: normal;
+            width: 100%;
+        }
+        .list-block .item-title .sub-title{
+            font-size: 0.7rem;
+            line-height: 0.75rem;
+        }
+        .list-block .item-media{
+            overflow: visible;
+        }
+        .list-block .item-media{
+            align-self: flex-start;
+            margin-top: 0.7rem;
+        }
+
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left" href="#"><i class="global-icon header-back-icon"></i></a>
+        <a class="button button-link button-nav pull-right" href="#"><i class="global-icon header-menu-icon"></i></a>
+        <h1 class="title">管理员</h1>
+    </header>
+    <nav class="bar bar-tab footer-menu">
+        <div class="pl5 pr5 pt5">
+            <div class="sub-bar text-center pb5">
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-4.png"/><span>首页</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-3.png"/><span>发现</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-2.png"/><span>消息</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-1.png"/><span>我的</span></a>
+            </div>
+            <a class="btn title-padding text-center footer-cancel-btn" href="#">取消</a>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="main-content white-bg">
+            <div class="pad5 row m-sub-bg">
+                <div class="search-input col-80">
+                    <label class="icon icon-search" for="search"></label>
+                    <input class="no-radius control-input" type="search" id='search' placeholder='搜索添加管理员'/>
+                </div>
+                <a class="button button-fill button-primary col-20 m-bg small-radius search-btn">搜索</a>
+            </div>
+            <div class="list-block no-margin">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-media media no-padding mr5 media-img-admin">
+                                <img class="media-img" width="50" height="50" src="http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg"/>
+                            </div>
+                            <div class="item-title">
+                                <p class="no-margin item-title by-text-warning">主持人昵称</p>
+                                <p class="sub-line-clamp sub-title no-margin">在股票市场上，具备卓越的投资眼光，创造财富神话，被社会所广 按时间迪欧达</p>
+                                <p class="no-margin small-txt text-gray small-pt">粉丝 13k</p>
+                            </div>
+                            <div class="item-after">
+                                <a class="button small-radius label-warning" href="#">退出认领</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-media media no-padding mr5">
+                                <img class="media-img" width="50" height="50" src="http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg"/>
+                            </div>
+                            <div class="item-title">
+                                <p class="no-margin item-title">昵称</p>
+                                <p class="sub-line-clamp sub-title no-margin">在股票市场上，具备卓</p>
+                                <p class="no-margin small-txt text-gray small-pt">粉丝 13k</p>
+                            </div>
+                            <div class="item-after">
+                                <a class="button small-radius label-danger" href="#">取消管理员</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-media media no-padding mr5">
+                                <img class="media-img" width="50" height="50" src="http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg"/>
+                            </div>
+                            <div class="item-title">
+                                <p class="no-margin item-title">昵称</p>
+                                <p class="sub-line-clamp sub-title no-margin">在股票市场上，</p>
+                                <p class="no-margin small-txt text-gray small-pt">粉丝 13k</p>
+                            </div>
+                            <div class="item-after">
+                                <a class="button small-radius label-danger" href="#">取消管理员</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+</body>
+</html>
