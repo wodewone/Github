@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>消息</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        img{
+            vertical-align: middle;
+        }
+        .dividing:before{
+            content: '';
+            background: #e7e7e7;
+             -webkit-transform: scaleY(.5);
+            -ms-transform: scaleY(.5);
+            -o-transform: scaleY(.5);
+            transform: scaleY(.5);
+        }
+        .main-bar .btn-icon{
+            margin: 0 .35rem;
+            width: 0.85rem;
+            vertical-align: middle;
+        }
+        .first-menu{
+            background: url("images/message/index-menu-bg.png") center;
+            background-size: 100%;
+            padding: 0.75rem 0;
+        }
+        .first-menu a.btn:first-child{
+            background: url("images/message/diving.png") no-repeat center right;
+            background-size: 1% 80%;
+        }
+        .index-btn-icon{
+            height: 4rem;
+        }
+        .item-content{
+            padding: 0 .35rem;
+        }
+        .list-block .item-inner{
+            padding: 0;
+        }
+        .list-block .btn{
+            width: 100%;
+            padding: 0.5rem 0;
+        }
+        .msg-num{
+            width: 1rem;
+            height: 1rem;
+            line-height: 1.1rem;
+            margin-top: 0.1rem;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .title-icon{
+            width: 1rem;
+            margin-top: -0.15rem;
+            margin-right: 0.5rem;
+        }
+        .user-icon-box{
+            width: 2.5rem;
+            height: 2.5rem;
+            position: relative;
+        }
+        .user-icon{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /*background-color: #ddd;*/
+            background-color: #999;
+            /*-webkit-transform-origin: 50% 100%;*/
+            /*-ms-transform-origin: 50% 100%;*/
+            /*-o-transform-origin: 50% 100%;*/
+            /*transform-origin: 50% 100%;*/
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav main-bar no-dividing">
+        <a class="button button-link button-nav pull-left" href="#">LOGO</a>
+        <a class="button button-link button-nav pull-right" href="#"><img class="btn-icon" src="images/index/in-menu-btn-1.png"/></a>
+        <div class="bar bar-tab sub-bar no-dividing">
+            <a class="tab-item" href="#">首页</a>
+            <a class="tab-item" href="#">发现</a>
+            <a class="tab-item active" href="#">消息</a>
+            <a class="tab-item" href="#">我的</a>
+        </div>
+    </header>
+    <div class="content">
+        <a class="fixed-btn" href="#"><img src="images/fixed-icon.png"/></a>
+        <div class="main-content">
+            <div class="card">
+                <div class="white-bg first-menu">
+                    <div class="row no-gutter">
+                        <div class="col-50">
+                            <a href="#" class="btn text-center"><img class="index-btn-icon" src="images/message/message-1.png" alt=""/></a>
+                        </div>
+                        <div class="col-50">
+                            <a href="#" class="btn text-center"><img class="index-btn-icon" src="images/message/message-4.png" alt=""/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card white-bg">
+                <div class="list-block">
+                    <ul>
+                        <li class="item-content">
+                            <a class="btn" href="#">
+                                <div class="item-inner">
+                                    <div class="item-title m-color"><img class="title-icon" src="images/message/message-9.png"/>评论</div>
+                                    <div class="item-after"><span class="msg-num label-danger small-txt text-center">99</span><i class="global-icon content-more-icon"></i></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item-content">
+                            <a class="btn" href="#">
+                                <div class="item-inner">
+                                    <div class="item-title m-color"><img class="title-icon" src="images/message/message-8.png"/>@我</div>
+                                    <div class="item-after"><span class="msg-num label-danger small-txt text-center">99</span><i class="global-icon content-more-icon"></i></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item-content">
+                            <a class="btn" href="#">
+                                <div class="item-inner">
+                                    <div class="item-title m-color"><img class="title-icon" src="images/message/message-7.png"/>赞</div>
+                                    <div class="item-after"><span class="msg-num label-danger small-txt text-center">99</span><i class="global-icon content-more-icon"></i></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item-content">
+                            <a class="btn" href="#">
+                                <div class="item-inner">
+                                    <div class="item-title m-color"><img class="title-icon" src="images/message/message-6.png"/>系统消息</div>
+                                    <div class="item-after"><span class="msg-num label-danger small-txt text-center">99</span><i class="global-icon content-more-icon"></i></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item-content">
+                            <a class="btn" href="#">
+                                <div class="item-inner">
+                                    <div class="item-title m-color"><img class="title-icon" src="images/message/message-5.png"/>群组消息</div>
+                                    <div class="item-after"><span class="msg-num label-danger small-txt text-center">99</span><i class="global-icon content-more-icon"></i></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-block">
+                    <ul>
+                        <li class="item-content">
+                            <div class="media pt5 pb5 dividing">
+                                <a class="btn" href="javascript:;">
+                                    <div class="media-left">
+                                        <div class="user-icon-box">
+                                            <img class="media-img user-icon" src="images/default-icon.png"/>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <p class="text-gray text-hidden no-margin small-pt">爱基金<span class="pull-right text-gray small-txt">6小时前</span></p>
+                                        <p class="no-margin">好有道理的样子</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="media pt5 pb5 dividing">
+                                <a class="btn" href="javascript:;">
+                                    <div class="media-left">
+                                        <div class="user-icon-box">
+                                            <img class="media-img user-icon" src="images/default-icon.png"/>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <p class="text-gray text-hidden no-margin small-pt">爱基金<span class="pull-right text-gray small-txt">6小时前</span></p>
+                                        <p class="no-margin">好有道理的样子</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="media pt5 pb5 dividing">
+                                <a class="btn" href="javascript:;">
+                                    <div class="media-left">
+                                        <div class="user-icon-box">
+                                            <img class="media-img user-icon" src="images/default-icon.png"/>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <p class="text-gray text-hidden no-margin small-pt">爱基金<span class="pull-right text-gray small-txt">6小时前</span></p>
+                                        <p class="no-margin">好有道理的样子</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="media pt5 pb5 dividing">
+                                <a class="btn" href="javascript:;">
+                                    <div class="media-left">
+                                        <div class="user-icon-box">
+                                            <img class="media-img user-icon" src="images/default-icon.png"/>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <p class="text-gray text-hidden no-margin small-pt">爱基金<span class="pull-right text-gray small-txt">6小时前</span></p>
+                                        <p class="no-margin">好有道理的样子</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+</body>
+</html>

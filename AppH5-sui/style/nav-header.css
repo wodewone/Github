@@ -1,4 +1,11 @@
 /*-------------------- header -------------------*/
+.footer-menu ~ .content{
+    bottom: 0;
+}
+.footer-bar ~ .content{
+    bottom: 2rem;
+}
+
 .main-bar{
     height: 4rem;
 }
@@ -115,11 +122,8 @@ header.bar .bar:before, header.bar .bar:after{
     content: '';
     display: none;
 }
-.footer-menu ~ .content{
-    bottom: 0;
-}
 .footer-menu{
-    z-index: 999;
+    z-index: 1001;
     height: 6.3rem;
     bottom: -7rem;
     transition: bottom 0.3s;

@@ -89,6 +89,9 @@
             top: auto;
             bottom: -0.45rem;
         }
+        #loadMore{
+            background: #fff;
+        }
     </style>
 </head>
 <body>
@@ -225,10 +228,8 @@
                     </div>
                 </div>
             </div>
-
-            <!-- 加载提示符 -->
-            <div class="infinite-scroll-preloader">
-                <div class="preloader"></div>
+            <div class="clearfix">
+                <a id="loadMore" class="btn sub-title pad5 text-center" href="javascript:;">加载更多</a>
             </div>
         </div>
     </div>
@@ -239,103 +240,80 @@
 <script type='text/javascript' src='js/base.js' charset='utf-8'></script>
 <script>
     $(function(){
-        $(document).on("pageInit", function(e, id, page) {
-            var loading = false;
-
-            // 最多可加载的条目
-            var maxItems = 100;
-            // 每次加载添加多少条目
-            var itemsPerLoad = 10;
-            function addItems(number, lastIndex) {
-                // 生成新条目的HTML
-                var html = '';
-                for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
-                    html += '<div class="card">'+
-                            '<div class="card-content-box">'+
-                            '    <div class="card-content pt5">'+
-                            '        <div class="card-content-inner">'+
-                            '            <div class="media">'+
-                            '                <div class="media-left">'+
-                            '                    <div class="media-left-inner">'+
-                            '                        <img class="page-media-img" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>'+
-                            '                        <span class="media-tag label-danger by-label">第三套<i class="tag-arrow"></i></span>'+
-                            '                    </div>'+
-                            '                </div>'+
-                            '                <div class="media-body">'+
-                            '                    <div class="media-header title-padding">'+
-                            '                        <p class="sub-line-clamp no-margin media-sub-p">晕扫地机爱是妒忌啊死哦大劫案送到家激动啊奇偶 asdasdsaasdasSD 萨达撒手大赛</p>'+
-                            '                    </div>'+
-                            '                    <div class="media-tag-group">'+
-                            '                        <div class="row no-gutter">'+
-                            '                            <div class="col-25 text-hidden">'+
-                            '                                &nbsp;'+
-                            '                            </div>'+
-                            '                            <div class="col-25 text-hidden text-center">'+
-                            '                                <a class="text-gray small-btn" href="#">'+
-                            '                                    <i class="global-icon favourite-icon"></i>122'+
-                            '                                </a>'+
-                            '                            </div>'+
-                            '                            <div class="col-25 text-gray text-hidden text-center">'+
-                            '                                <a class="text-gray small-btn" href="#">'+
-                            '                                    <i class="global-icon comment-icon"></i>300'+
-                            '                                </a>'+
-                            '                            </div>'+
-                            '                            <div class="col-25 text-gray text-hidden text-center">'+
-                            '                                <a class="text-gray small-btn" href="#">'+
-                            '                                    <i class="global-icon more-icon"></i>'+
-                            '                                </a>'+
-                            '                            </div>'+
-                            '                        </div>'+
-                            '                    </div>'+
-                            '                </div>'+
-                            '            </div>'+
-                            '            <div class="title-padding">'+
-                            '                <div class="header-title-row">'+
-                            '                    <div class="header-title-after">'+
-                            '                        <a class="button mr5 m-bg m-border-color small-btn subscribe-btn" href="javascript;:"><span class="sure"><i class="global-icon content-add-icon"></i>订阅</span><span class="cancel">取消订阅</span></a>'+
-                            '                    </div>'+
-                            '                    <div class="header-title subscribe-title">扫地回家啊死哦等哈四大送点花急哦啊是大劫案松紧带书记哦 i</div>'+
-                            '                </div>'+
-                            '            </div>'+
-                            '        </div>'+
-                            '    </div>'+
-                            '</div>'+
-                            '</div>';
-                }
-                // 添加新条目
-                $('.list-container').append(html);
-            }
-
-            //预先加载20条
-            addItems(itemsPerLoad, 0);
-            // 上次加载的序号
-            var lastIndex = 20;
-
-            $('.content').on('infinite', function(e){
-                if (loading) return;
-                loading = true;
-
-                // 模拟1s的加载过程
-                setTimeout(function () {
-                    loading = false;
-                    if (lastIndex >= maxItems) {
-                        // 加载完毕，则注销无限加载事件，以防不必要的加载
-                        $.detachInfiniteScroll($('.infinite-scroll'));
-                        // 删除加载提示符
-                        $('.infinite-scroll-preloader').remove();
-                        return;
-                    }
-                    // 添加新条目
-                    addItems(itemsPerLoad, lastIndex);
-                    // 更新最后加载的序号
-                    lastIndex = $('.list-container li').length;
-                    //容器发生改变,如果是js滚动，需要刷新滚动
-                    $.refreshScroller();
-                }, 1000);
-            });
+        $('#loadMore').on('click',function(){
+            loadMoreData();
         });
-        $.init();
-    })
+    });
+
+
+    function loadMoreData(){
+        // 模拟1s的加载过程
+        setTimeout(function () {
+            // 添加新条目
+            addItems({data:1});
+        }, 1000);
+    }
+
+
+    function addItems(data) {
+        // 生成新条目的HTML
+        var html = '';
+        $.each(data,function(){
+            html += '<div class="card">'+
+                    '<div class="card-content-box">'+
+                    '    <div class="card-content pt5">'+
+                    '        <div class="card-content-inner">'+
+                    '            <div class="media">'+
+                    '                <div class="media-left">'+
+                    '                    <div class="media-left-inner">'+
+                    '                        <img class="page-media-img" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>'+
+                    '                        <span class="media-tag label-danger by-label">第三套<i class="tag-arrow"></i></span>'+
+                    '                    </div>'+
+                    '                </div>'+
+                    '                <div class="media-body">'+
+                    '                    <div class="media-header title-padding">'+
+                    '                        <p class="sub-line-clamp no-margin media-sub-p">晕扫地机爱是妒忌啊死哦大劫案送到家激动啊奇偶 asdasdsaasdasSD 萨达撒手大赛</p>'+
+                    '                    </div>'+
+                    '                    <div class="media-tag-group">'+
+                    '                        <div class="row no-gutter">'+
+                    '                            <div class="col-25 text-hidden">'+
+                    '                                &nbsp;'+
+                    '                            </div>'+
+                    '                            <div class="col-25 text-hidden text-center">'+
+                    '                                <a class="text-gray small-btn" href="#">'+
+                    '                                    <i class="global-icon favourite-icon"></i>122'+
+                    '                                </a>'+
+                    '                            </div>'+
+                    '                            <div class="col-25 text-gray text-hidden text-center">'+
+                    '                                <a class="text-gray small-btn" href="#">'+
+                    '                                    <i class="global-icon comment-icon"></i>300'+
+                    '                                </a>'+
+                    '                            </div>'+
+                    '                            <div class="col-25 text-gray text-hidden text-center">'+
+                    '                                <a class="text-gray small-btn" href="#">'+
+                    '                                    <i class="global-icon more-icon"></i>'+
+                    '                                </a>'+
+                    '                            </div>'+
+                    '                        </div>'+
+                    '                    </div>'+
+                    '                </div>'+
+                    '            </div>'+
+                    '            <div class="title-padding">'+
+                    '                <div class="header-title-row">'+
+                    '                    <div class="header-title-after">'+
+                    '                        <a class="button mr5 m-bg m-border-color small-btn subscribe-btn" href="javascript;:"><span class="sure"><i class="global-icon content-add-icon"></i>订阅</span><span class="cancel">取消订阅</span></a>'+
+                    '                    </div>'+
+                    '                    <div class="header-title subscribe-title">扫地回家啊死哦等哈四大送点花急哦啊是大劫案松紧带书记哦 i</div>'+
+                    '                </div>'+
+                    '            </div>'+
+                    '        </div>'+
+                    '    </div>'+
+                    '</div>'+
+                    '</div>';
+        });
+        // 添加新条目
+        $('.list-container').append(html);
+    }
 </script>
 </body>
 </html>

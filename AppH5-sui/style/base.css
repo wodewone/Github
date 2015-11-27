@@ -205,18 +205,25 @@ a.btn, .btn{
     border-color: #91C837;
     color: #fff;
 }
+.label-default, a.label-default {
+    border-color: #fff;
+    color: #fff;
+}
 
-.by-text-warning {
+.by-text-warning, a.by-text-warning {
     color: #FDC40E !important;
 }
-.by-text-danger {
+.by-text-danger, a.by-text-danger {
     color: #FB6237 !important;
 }
-.by-text-info {
+.by-text-info, a.by-text-info {
     color: #5C86EA !important;
 }
-.by-text-success {
+.by-text-success, a.by-text-success {
     color: #91C837 !important;
+}
+.by-text-default, a.by-text-default{
+    color: #fff !important;
 }
 .by-text-link{
     margin: 0 0.2rem;
@@ -335,9 +342,14 @@ a.btn, .btn{
 
 
 /*------------ content --------------*/
+.bar-tab .tab-item.active, .bar-tab .tab-item:active{
+    color: #929292;
+}
+.content{
+    background: #dbdfe4;
+}
 .main-bar ~ .content{
     top: 4rem;
-    background: #dbdfe4;
 }
 .main-content{
     overflow: hidden;

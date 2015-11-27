@@ -49,6 +49,9 @@
         a.apply-btn{
             color: #fff;
         }
+        .global-icon{
+            align-items: flex-end;
+        }
     </style>
 </head>
 <body>
@@ -79,17 +82,25 @@
                         <a class="btn m-color" href="#">
                             <div class="item-inner">
                                 <div class="item-title sub-title">封面</div>
-                                <div class="item-after"><img class="cover-img" src="http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg" /><i class="global-icon content-more-icon"></i></div>
+                                <div class="item-after">
+                                    <img class="cover-img" src="http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg" />
+                                    <i class="global-icon content-more-icon"></i>
+                                </div>
                             </div>
                         </a>
                     </li>
                     <li class="item-content">
-                        <a class="btn create-actions" href="javascript:;">
-                            <div class="item-inner">
-                                <div class="item-media mr5"><span class="sub-title">分类</span></div>
-                                <div class="item-after"><span class="text-gray pt5 pb5">请选择</span><i class="global-icon content-more-icon"></i></div>
-                            </div>
-                        </a>
+                        <div class="item-inner">
+                            <div class="item-media mr5"><span class="sub-title">分类</span></div>
+                            <label class="item-after" for="type-select">
+                                <select id="type-select">
+                                    <option value="1">不知道</option>
+                                </select>
+                                <div class="pl5">
+                                    <i class="global-icon content-more-icon"></i>
+                                </div>
+                            </label>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -122,35 +133,5 @@
 <script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='js/base.js' charset='utf-8'></script>
-<script>
-    $(document).on('click','.create-actions', function () {
-        var buttons1 = [
-            {
-                text: '请选择',
-                label: true
-            },
-            {
-                text: '活动',
-                onClick: function() {
-                    $.alert("你选择了“活动“");
-                }
-            },
-            {
-                text: '段子',
-                onClick: function() {
-                    $.alert("你选择了“段子“");
-                }
-            }
-        ];
-        var buttons2 = [
-            {
-                text: '取消',
-                bg: 'danger'
-            }
-        ];
-        var groups = [buttons1, buttons2];
-        $.actions(groups);
-    });
-</script>
 </body>
 </html>

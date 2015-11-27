@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>群组标签</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        .tag-block{
+            margin-right: -0.5rem;
+        }
+        .tag-item{
+            display: inline-block;
+            min-width: 4rem;
+            float: left;
+            margin-right: 0.5rem;
+        }
+        .tag-link{
+            display: block;
+            padding: 0;
+            color: #242930;
+            line-height: 2rem;
+            font-size: 0.8rem;
+            text-align: center;
+            border-radius: 0.2rem;
+            background-color: #fff;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-bottom: 0.5rem;
+        }
+        .tag-link.m-active-bg{
+            color: #fff;
+        }
+        .tag-delete{
+            position: relative;
+        }
+        .tag-delete:after{
+            content: '';
+            position: absolute;
+            top: -.25rem;
+            right: -.25rem;
+            width: 0.85rem;
+            height: 0.85rem;
+            background: url("images/group/group-delete.png") no-repeat center;
+            background-size: 100%;
+        }
+        .custom-tag-box .row{
+            overflow: visible;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left back external" href="#"><i class="global-icon header-back-icon"></i></a>
+        <a class="button button-link button-nav pull-right" href="javascript:;">完成</a>
+        <h1 class="title">群组标签</h1>
+    </header>
+    <div class="content">
+        <div class="main-content">
+            <div class="pad5 row">
+                <div class="search-input col-80">
+                    <input class="no-radius control-input pl5" type="search" id='tag-input' placeholder='添加自定义标签1～5个'/>
+                </div>
+                <a id="add-tag-btn" class="button button-fill button-primary col-20 m-bg small-radius search-btn">添加</a>
+            </div>
+            <div class="tag-block">
+                <div class="tag-box pad5 clearfix">
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>金融</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>政策</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>投资策略</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>大盘</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>港股</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>美股</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>研报</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>国际业务</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>科技</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>消费</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>贷款</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>公司</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>私募</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>信托</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>储蓄</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>基金</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>保险</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>黄金</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>外汇</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>银行理财</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>政策</span></a></div>
+                    <div class="tag-item"><a class="tag-link" href="javascript:;"><span>段子</span></a></div>
+                </div>
+                <div class="pl5 pr5 custom-tag-box">
+                    <p class="no-margin sub-title">自定义添加</p>
+                    <div class="pt5 clearfix custom-tag">
+                        <div class="tag-item tag-delete"><a class="tag-link m-active-bg" href="javascript:;"><span>金融</span></a></div>
+                        <div class="tag-item tag-delete"><a class="tag-link m-active-bg" href="javascript:;"><span>金融</span></a></div>
+                        <div class="tag-item tag-delete"><a class="tag-link m-active-bg" href="javascript:;"><span>金融</span></a></div>
+                        <div class="tag-item tag-delete"><a class="tag-link m-active-bg" href="javascript:;"><span>金融</span></a></div>
+                        <div class="tag-item tag-delete"><a class="tag-link m-active-bg" href="javascript:;"><span>金融</span></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/base.js' charset='utf-8'></script>
+<script>
+    $(function(){
+        $('.tag-box .tag-link').on('click',function(){
+            $(this).toggleClass('m-active-bg');
+        });
+        $(document).on('click','.tag-delete',function(){
+            $(this).remove();
+        });
+        $('#add-tag-btn').on('click',function(){
+            var name = $('#tag-input').val();
+            if(!name){
+                $.alert('请输入内容在添加');
+                return;
+            }
+            $('.custom-tag-box .custom-tag').append('<div class="tag-item tag-delete"><a class="tag-link m-active-bg" href="javascript:;"><span>'+ name +'</span></a></div>');
+            $('#tag-input').val('');
+        });
+    })
+</script>
+</body>
+</html>

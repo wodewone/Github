@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="style/global-icon.css"/>
     <link rel="stylesheet" href="style/nav-header.css"/>
     <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        #loadMore{
+            background: #fff;
+        }
+    </style>
 </head>
 <body>
 <div class="page">
@@ -247,9 +252,8 @@
                     </div>
                 </div>
             </div>
-            <!-- 加载提示符 -->
-            <div class="infinite-scroll-preloader">
-                <div class="preloader"></div>
+            <div class="clearfix">
+                <a id="loadMore" class="btn sub-title pad5 text-center" href="javascript:;">加载更多</a>
             </div>
         </div>
     </div>
@@ -260,110 +264,87 @@
 <script type='text/javascript' src='js/base.js' charset='utf-8'></script>
 <script>
     $(function(){
-        $(document).on("pageInit", function(e, id, page) {
-            var loading = false;
+        $('#loadMore').on('click',function(){
+            loadMoreData();
+        });
+    });
 
-            // 最多可加载的条目
-            var maxItems = 100;
-            // 每次加载添加多少条目
-            var itemsPerLoad = 10;
-            function addItems(number, lastIndex) {
-                // 生成新条目的HTML
-                var html = '';
-                for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
-                    html += '<div class="card">'+
-                    '                <div class="card-content-box">'+
-                    '                    <div class="card-content pt5">'+
-                    '                        <div class="card-content-inner">'+
-                    '                            <div class="media media-padding-left-right">'+
-                    '                                <div class="media-left">'+
-                    '                                    <img class="page-media-img" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>'+
-                    '                                </div>'+
-                    '                                <div class="media-body">'+
-                    '                                    <div class="media-header media-absolute">'+
-                    '                                        <div class="media-header-inner">'+
-                    '                                            <div class="header-title-row">'+
-                    '                                                <div class="header-title">#云生活巨优惠#</div>'+
-                    '                                                <span class="by-label label-danger header-title-after">活动</span>'+
-                    '                                            </div>'+
-                    '                                        </div>'+
-                    '                                    </div>'+
-                    '                                    <div class="media-content">'+
-                    '                                        <p class="sub-title sub-line-clamp no-margin media-sub-p">晕扫地机爱是妒忌啊死哦大劫案送到家激动啊奇偶 asdasdsaasdasSD 萨达撒手大赛</p>'+
-                    '                                    </div>'+
-                    '                                    <div class="media-tag-group">'+
-                    '                                        <div class="row no-gutter">'+
-                    '                                            <div class="col-33 text-gray small-txt text-hidden">'+
-                    '                                                <i class="base-icon base-look-icon"></i>99k阅读'+
-                    '                                            </div>'+
-                    '                                            <div class="col-33 text-gray small-txt text-hidden">'+
-                    '                                                <i class="base-icon base-comm-icon"></i>1k讨论'+
-                    '                                            </div>'+
-                    '                                            <div class="col-33 text-gray small-txt text-hidden">'+
-                    '                                                <i class="base-icon base-join-icon"></i>300参与'+
-                    '                                            </div>'+
-                    '                                        </div>'+
-                    '                                    </div>'+
-                    '                                </div>'+
+
+    function loadMoreData(){
+        // 模拟1s的加载过程
+        setTimeout(function () {
+            // 添加新条目
+            addItems({data:1});
+        }, 1000);
+    }
+
+
+    function addItems(data) {
+        // 生成新条目的HTML
+        var html = '';
+        $.each(data,function(){
+            html += '<div class="card">'+
+                    '<div class="card-content-box">'+
+                    '    <div class="card-content pt5">'+
+                    '        <div class="card-content-inner">'+
+                    '            <div class="media media-padding-left-right">'+
+                    '                <div class="media-left">'+
+                    '                    <img class="page-media-img" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>'+
+                    '                </div>'+
+                    '                <div class="media-body">'+
+                    '                    <div class="media-header media-absolute">'+
+                    '                        <div class="media-header-inner">'+
+                    '                            <div class="header-title-row">'+
+                    '                                <div class="header-title">#云生活巨优惠#</div>'+
+                    '                                <span class="by-label label-danger header-title-after">活动</span>'+
                     '                            </div>'+
-                    '                            <div class="media-bottom media-padding-left-right">'+
-                    '                                <div class="media title-padding">'+
-                    '                                    <div class="media-left">'+
-                    '                                        <p class="sub-title media-bottom-title">他们都在参与</p>'+
-                    '                                    </div>'+
-                    '                                    <div class="media-body">'+
-                    '                                        <div class="join-user-box">'+
-                    '                                            <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>'+
-                    '                                            <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>'+
-                    '                                            <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>'+
-                    '                                            <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>'+
-                    '                                            <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>'+
-                    '                                        </div>'+
-                    '                                    </div>'+
-                    '                                </div>'+
-                    '                                <div class="more">'+
-                    '                                    <i class="global-icon content-more-icon"></i>'+
-                    '                                </div>'+
+                    '                        </div>'+
+                    '                    </div>'+
+                    '                    <div class="media-content">'+
+                    '                        <p class="sub-title sub-line-clamp no-margin media-sub-p">晕扫地机爱是妒忌啊死哦大劫案送到家激动啊奇偶 asdasdsaasdasSD 萨达撒手大赛</p>'+
+                    '                    </div>'+
+                    '                    <div class="media-tag-group">'+
+                    '                        <div class="row no-gutter">'+
+                    '                            <div class="col-33 text-gray small-txt text-hidden">'+
+                    '                                <i class="base-icon base-look-icon"></i>99k阅读'+
+                    '                            </div>'+
+                    '                            <div class="col-33 text-gray small-txt text-hidden">'+
+                    '                                <i class="base-icon base-comm-icon"></i>1k讨论'+
+                    '                            </div>'+
+                    '                            <div class="col-33 text-gray small-txt text-hidden">'+
+                    '                                <i class="base-icon base-join-icon"></i>300参与'+
                     '                            </div>'+
                     '                        </div>'+
                     '                    </div>'+
                     '                </div>'+
-                    '            </div>';
-                }
-                // 添加新条目
-                $('.list-container').append(html);
-            }
-
-            //预先加载20条
-            addItems(itemsPerLoad, 0);
-            // 上次加载的序号
-            var lastIndex = 20;
-
-            $('.content').on('infinite', function(e){
-                if (loading) return;
-                loading = true;
-
-                // 模拟1s的加载过程
-                setTimeout(function () {
-                    loading = false;
-                    if (lastIndex >= maxItems) {
-                        // 加载完毕，则注销无限加载事件，以防不必要的加载
-                        $.detachInfiniteScroll($('.infinite-scroll'));
-                        // 删除加载提示符
-                        $('.infinite-scroll-preloader').remove();
-                        return;
-                    }
-                    // 添加新条目
-                    addItems(itemsPerLoad, lastIndex);
-                    // 更新最后加载的序号
-                    lastIndex = $('.list-container li').length;
-                    //容器发生改变,如果是js滚动，需要刷新滚动
-                    $.refreshScroller();
-                }, 1000);
-            });
+                    '            </div>'+
+                    '            <div class="media-bottom media-padding-left-right">'+
+                    '                <div class="media title-padding">'+
+                    '                    <div class="media-left">'+
+                    '                        <p class="sub-title media-bottom-title">他们都在参与</p>'+
+                    '                    </div>'+
+                    '                    <div class="media-body">'+
+                    '                        <div class="join-user-box">'+
+                    '                            <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>'+
+                    '                            <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>'+
+                    '                            <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>'+
+                    '                            <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>'+
+                    '                            <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/></a>'+
+                    '                        </div>'+
+                    '                    </div>'+
+                    '                </div>'+
+                    '                <div class="more">'+
+                    '                    <i class="global-icon content-more-icon"></i>'+
+                    '                </div>'+
+                    '            </div>'+
+                    '        </div>'+
+                    '    </div>'+
+                    '</div>'+
+                    '</div>';
         });
-        $.init();
-    })
+        // 添加新条目
+        $('.list-container').append(html);
+    }
 </script>
 </body>
 </html>
