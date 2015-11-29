@@ -161,6 +161,25 @@ a.btn, .btn{
     -o-transform-origin: 50% 100%;
     transform-origin: 50% 100%;
 }
+
+.vertical-dividing{
+    position: relative;
+}
+.vertical-dividing:before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0;
+    z-index: 15;
+    display: block;
+    height: 100%;
+    width: 1px;
+    background-color: #ddd;
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
 .no-dividing:before, .no-dividing:after{
     content: '';
     display: none !important;

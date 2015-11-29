@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>隐私和安全</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left back external" href="#"><i class="global-icon header-back-icon"></i></a>
+        <a class="button button-link button-nav pull-right header-menu-btn" href="#"><i class="global-icon header-menu-icon"></i></a>
+        <h1 class="title">隐私和安全</h1>
+    </header>
+    <nav class="bar bar-tab footer-menu">
+        <div class="pl5 pr5 pt5">
+            <div class="sub-bar text-center pb5">
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-4.png"/><span>首页</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-3.png"/><span>发现</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-2.png"/><span>消息</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-1.png"/><span>我的</span></a>
+            </div>
+            <a class="btn title-padding text-center footer-cancel-btn" href="#">取消</a>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="main-content">
+            <div class="card white-bg pad5">
+                <div class="media-padding-left-right">
+                    <p class="no-margin sub-title small-txt">关闭后，你的通讯录好友将不能通过通讯录找到你</p>
+                    <a class="btn m-color check-btn" href="javascript:;">
+                        <div class="clearfix small-pt">
+                            <p class="no-margin small-title pull-left">允许通过此手机号搜到我</p>
+                            <i class="base-form-icon base-cb pull-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="card white-bg pad5">
+                <p class="no-margin media-padding-left-right sub-title small-txt">哪些人可以评论我的观点</p>
+                <a class="btn media-padding-left-right dividing-after cr-btn" href="javascript:;">
+                    <div class="clearfix small-pt pb5">
+                        <p class="no-margin small-title pull-left">所有人</p>
+                        <i class="base-form-icon base-cr pull-right active"></i>
+                    </div>
+                </a>
+                <a class="btn media-padding-left-right cr-btn" href="javascript:;">
+                    <div class="clearfix pt5">
+                        <p class="no-margin small-title pull-left">我关注的人</p>
+                        <i class="base-form-icon base-cr pull-right"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="card white-bg pad5">
+                <div class="media-padding-left-right">
+                    <p class="no-margin sub-title small-txt">关闭后，其他人将不能在你的观点下发布带图片的评论</p>
+                    <a class="btn m-color check-btn" href="javascript:;">
+                        <div class="clearfix small-pt">
+                            <p class="no-margin small-title pull-left">允许评论带图</p>
+                            <i class="base-form-icon base-cb pull-right active"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="card white-bg pad5">
+                <p class="no-margin sub-title media-padding-left-right small-txt">我可以收到哪些人的@提醒</p>
+                <a class="btn media-padding-left-right dividing-after cr-btn" href="javascript:;">
+                    <div class="clearfix small-pt pb5">
+                        <p class="no-margin small-title pull-left">所有人</p>
+                        <i class="base-form-icon base-cr pull-right active"></i>
+                    </div>
+                </a>
+                <a class="btn media-padding-left-right cr-btn" href="javascript:;">
+                    <div class="clearfix pt5">
+                        <p class="no-margin small-title pull-left">我关注的人</p>
+                        <i class="base-form-icon base-cr pull-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/base.js' charset='utf-8'></script>
+<script>
+    $(function(){
+        $('.check-btn').on('click',function(){
+            $(this).find('.base-form-icon').toggleClass('active');
+        });
+        $('.cr-btn').on('click',function(){
+            $(this).siblings().find('.base-form-icon').removeClass('active');
+            $(this).find('.base-form-icon').addClass('active');
+        });
+    });
+</script>
+</body>
+</html>

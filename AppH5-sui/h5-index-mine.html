@@ -68,6 +68,24 @@
             line-height: 0.5rem;
             margin-left: 0.5rem;
         }
+        .vertical-dividing{
+            position: relative;
+        }
+        .vertical-dividing:before{
+            content: '';
+            position: absolute;
+            top: 25%;
+            left: 0;
+            z-index: 15;
+            display: block;
+            height: 50%;
+            width: 1px;
+            background-color: #eee;
+            -webkit-transform-origin: 50% 100%;
+            -ms-transform-origin: 50% 100%;
+            -o-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+        }
     </style>
 </head>
 <body>
@@ -100,13 +118,13 @@
                     </a>
                     <div class="row no-gutter">
                         <div class="col-33">
-                            <a class="btn text-center pad5 first-menu-btn" href="javascript:;"><span class="sub-title small-title">访客</span><br>122</a>
+                            <a class="btn text-center pad5" href="javascript:;"><span class="sub-title small-title">访客</span><br>122</a>
                         </div>
                         <div class="col-33">
-                            <a class="btn text-center pad5 first-menu-btn" href="javascript:;"><span class="sub-title small-title">关注</span><br>32</a>
+                            <a class="btn text-center pad5 vertical-dividing" href="javascript:;"><span class="sub-title small-title">关注</span><br>32</a>
                         </div>
                         <div class="col-33">
-                            <a class="btn text-center pad5" href="javascript:;"><span class="sub-title small-title">粉丝</span><br>12</a>
+                            <a class="btn text-center pad5 vertical-dividing" href="javascript:;"><span class="sub-title small-title">粉丝</span><br>12</a>
                         </div>
                     </div>
                 </div>

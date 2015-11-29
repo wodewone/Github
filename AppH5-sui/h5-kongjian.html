@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>众创空间</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        dl,dt,dd{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            vertical-align: top;
+        }
+        .header-icon{
+            vertical-align: middle;
+            height: 1.2rem;
+            padding: 0 0.25rem;
+        }
+        .vertical-dividing:before{
+            content: '';
+            top: 25%;
+            height: 50%;
+        }
+        .article-title{
+            font-weight: 400;
+            font-size: 0.9rem;
+        }
+        .title-icon{
+            vertical-align: baseline;
+            height: 0.8rem;
+            margin-right: 0.35rem;
+        }
+        .list-menu .item-media{
+            padding-top: 0.25rem;
+            align-self: flex-start;
+        }
+        .list-menu .item-media img{
+            width: 5rem;
+        }
+        .list-menu .item-title{
+            white-space: normal;
+        }
+        .list-menu .item-title .article-title{
+            padding: 0.3rem 0;
+        }
+        .list-menu .item-title .article-info{
+            position: relative;
+        }
+        .list-menu .item-title .article-info .sp-key{
+            width: 2.2rem;
+        }
+        .list-menu .item-title .article-info .sp-val{
+            display: block;
+            margin-left: 2.2rem;
+        }
+        .list-menu .item-bottom .article-title{
+            padding: 0.75rem 0;
+            background: #f3f3f3;
+        }
+
+        .popup-filter{
+            background: rgba(36,41,48,0.88);
+        }
+        .popup-filter .page, .popup-filter .page .content{
+            background: none;
+        }
+        .popup-filter a.filter-btn{
+            line-height: 1.5rem;
+            background: #6b7485;
+            color: #fff;
+            text-align: center;
+            font-size: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+        .popup-filter .row{
+            margin-left: -2%;
+        }
+        .popup-filter .row .col-25{
+            width: 23%;
+            margin-left: 2%;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left back external" href="#"><i class="global-icon header-back-icon"></i></a>
+        <a class="button button-link button-nav pull-right open-popup" data-popup=".popup-filter" href="#"><img class="header-icon" src="images/kongj/kj-1.png"/></a>
+        <h1 class="title">众创空间</h1>
+    </header>
+    <nav class="bar bar-tab footer-menu">
+        <div class="pl5 pr5 pt5">
+            <div class="sub-bar text-center pb5">
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-4.png"/><span>首页</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-3.png"/><span>发现</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-2.png"/><span>消息</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-1.png"/><span>我的</span></a>
+            </div>
+            <a class="btn title-padding text-center footer-cancel-btn" href="#">取消</a>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="main-content">
+            <div class="card list-block white-bg list-menu">
+                <div class="item-inner pad5">
+                    <div class="item-media mr5">
+                        <img src="images/jr-default.png"/>
+                    </div>
+                    <div class="item-title">
+                        <dl>
+                            <dt class="article-title">DRC创億梦工厂</dt>
+                            <dd class="article-info sub-title"><span class="sp-key pull-left">地址 :</span><span class="sp-val">北京市西城区新外大街28号</span></dd>
+                            <dd class="article-info sub-title"><span class="sp-key pull-left">定位 :</span><span class="sp-val">文化产业园</span></dd>
+                            <dd class="article-info sub-title"><span class="sp-key pull-left">服务 :</span><span class="sp-val">推介展示、法律咨询，财务顾问，工商登记，税 务申报，专利注册等服务</span></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="item-bottom row no-gutter">
+                    <div class="col-50">
+                        <a class="btn m-color text-center article-title" href="javascript:;"><img class="title-icon" src="images/kongj/kj-2.png"/>到这去</a>
+                    </div>
+                    <div class="col-50 vertical-dividing">
+                        <a class="btn m-color text-center article-title" href="javascript:;"><img class="title-icon" src="images/kongj/kj-3.png"/>讨论</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card list-block white-bg list-menu">
+                <div class="item-inner pad5">
+                    <div class="item-media mr5">
+                        <img src="images/jr-default.png"/>
+                    </div>
+                    <div class="item-title">
+                        <dl>
+                            <dt class="article-title">DRC创億梦工厂</dt>
+                            <dd class="article-info sub-title"><span class="sp-key pull-left">地址 :</span><span class="sp-val">北京市西城区新外大街28号</span></dd>
+                            <dd class="article-info sub-title"><span class="sp-key pull-left">定位 :</span><span class="sp-val">文化产业园</span></dd>
+                            <dd class="article-info sub-title"><span class="sp-key pull-left">服务 :</span><span class="sp-val">推介展示、法律咨询，财务顾问，工商登记，税 务申报，专利注册等服务</span></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="item-bottom row no-gutter">
+                    <div class="col-50">
+                        <a class="btn m-color text-center article-title" href="javascript:;"><img class="title-icon" src="images/kongj/kj-2.png"/>到这去</a>
+                    </div>
+                    <div class="col-50 vertical-dividing">
+                        <a class="btn m-color text-center article-title" href="javascript:;"><img class="title-icon" src="images/kongj/kj-3.png"/>讨论</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card list-block white-bg list-menu">
+                <div class="item-inner pad5">
+                    <div class="item-media mr5">
+                        <img src="images/jr-default.png"/>
+                    </div>
+                    <div class="item-title">
+                        <dl>
+                            <dt class="article-title">DRC创億梦工厂</dt>
+                            <dd class="article-info sub-title"><span class="sp-key pull-left">地址 :</span><span class="sp-val">北京市西城区新外大街28号</span></dd>
+                            <dd class="article-info sub-title"><span class="sp-key pull-left">定位 :</span><span class="sp-val">文化产业园</span></dd>
+                            <dd class="article-info sub-title"><span class="sp-key pull-left">服务 :</span><span class="sp-val">推介展示、法律咨询，财务顾问，工商登记，税 务申报，专利注册等服务</span></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="item-bottom row no-gutter">
+                    <div class="col-50">
+                        <a class="btn m-color text-center article-title" href="javascript:;"><img class="title-icon" src="images/kongj/kj-2.png"/>到这去</a>
+                    </div>
+                    <div class="col-50 vertical-dividing">
+                        <a class="btn m-color text-center article-title" href="javascript:;"><img class="title-icon" src="images/kongj/kj-3.png"/>讨论</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card list-block white-bg list-menu">
+                <div class="item-inner pad5">
+                    <div class="item-media mr5">
+                        <img src="images/jr-default.png"/>
+                    </div>
+                    <div class="item-title">
+                        <dl>
+                            <dt class="article-title">DRC创億梦工厂</dt>
+                            <dd class="article-info sub-title"><span class="sp-key pull-left">地址 :</span><span class="sp-val">北京市西城区新外大街28号</span></dd>
+                            <dd class="article-info sub-title"><span class="sp-key pull-left">定位 :</span><span class="sp-val">文化产业园</span></dd>
+                            <dd class="article-info sub-title"><span class="sp-key pull-left">服务 :</span><span class="sp-val">推介展示、法律咨询，财务顾问，工商登记，税 务申报，专利注册等服务</span></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="item-bottom row no-gutter">
+                    <div class="col-50">
+                        <a class="btn m-color text-center article-title" href="javascript:;"><img class="title-icon" src="images/kongj/kj-2.png"/>到这去</a>
+                    </div>
+                    <div class="col-50 vertical-dividing">
+                        <a class="btn m-color text-center article-title" href="javascript:;"><img class="title-icon" src="images/kongj/kj-3.png"/>讨论</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup popup-filter">
+    <div class="content-block">
+        <div class="page" style="display: block">
+            <header class="bar bar-nav no-dividing">
+                <a class="button button-link button-nav pull-left close-popup" href="#"><i class="global-icon header-back-icon"></i></a>
+                <h1 class="title">众创空间</h1>
+            </header>
+            <div class="content">
+                <div class="main-content pad5">
+                    <div class="ch-block">
+                        <p class="no-margin pt5 pb5 by-text-default article-info">按地区 (未选默认全部)</p>
+                        <div class="row small-pt">
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">上海</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">北京</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">天津</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">重庆</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">河北</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">山西</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">内蒙古</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">辽宁</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">吉林</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">黑龙江</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">江苏</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">浙江</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">安徽</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">福建</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">江西</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">山东</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">广西</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">海南</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">四川</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">贵州</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">湖南</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">河南</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">湖北</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">广东</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">云南</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">西藏</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">陕西</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">甘肃</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">宁夏</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">新疆</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">海外</a></div>
+                        </div>
+                    </div>
+                    <div class="ch-block">
+                        <p class="no-margin pt5 pb5 by-text-default article-info">按定位 (未选默认全部)</p>
+                        <div class="row small-pt">
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">文化创意</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">生物医药</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">硬件开源</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">移动互联</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">文化创意</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">生物医药</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">硬件开源</a></div>
+                            <div class="col-25"><a class="btn filter-btn" href="javascript:;">移动互联</a></div>
+                        </div>
+                    </div>
+                    <div class="pad10 pt5 mt5">
+                        <a class="btn label-danger pad5 small-radius text-center by-text-default" href="javascript:;">确定筛选</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/base.js' charset='utf-8'></script>
+<script>
+    $(function(){
+        $.popup('.popup-about');
+    })
+</script>
+</body>
+</html>

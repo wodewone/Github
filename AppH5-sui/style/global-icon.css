@@ -156,3 +156,21 @@
 .base-mine-icon{
     background-position: -152px -21px;
 }
+
+.base-form-icon{
+    vertical-align: middle;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background: no-repeat center center;
+    background-size: 100%;
+}
+.base-cr.active{
+    background-image: url("../images/form/cr-true.png");
+}
+.base-cb{
+    background-image: url("../images/form/cb-false.png");
+}
+.base-cb.active{
+    background-image: url("../images/form/cb-true.png");
+}
