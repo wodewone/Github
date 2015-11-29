@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>我的</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        .btn-icon{
+            margin: 0 .35rem;
+            width: 0.85rem;
+            vertical-align: middle;
+        }
+        .user-icon-box{
+            position: relative;
+        }
+        .user-icon-box:after{
+            content: '';
+            position: absolute;
+            bottom: 0.1rem;
+            right: 0;
+            width: 0.85rem;
+            height: 0.85rem;
+            background: url("images/mine/vip.png") no-repeat;
+            background-size: 100%;
+        }
+        .user-icon{
+            width: 2.8rem;
+            height: 2.8rem;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+        }
+        .grade-img{
+            width: 0.85rem;
+            vertical-align: text-top;
+            margin-left: 0.2rem;
+        }
+        .user-name{
+            margin-left: 3.5rem;
+        }
+        .after-mt5{
+            margin-top: -.2rem;
+        }
+        .list-block .item-inner{
+            padding: 0;
+        }
+        .title-icon{
+            width: 0.9rem;
+            margin-bottom: -0.12rem;
+            vertical-align: inherit;
+            margin-right: 0.5rem;
+        }
+        .grade-num{
+            display: inline-block;
+            border-radius: 1rem;
+            padding: 0.25rem 0.5rem;
+            background: #acc5cc;
+            line-height: 0.5rem;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav main-bar no-dividing">
+        <a class="button button-link button-nav pull-left" href="#">LOGO</a>
+        <a class="button button-link button-nav pull-right" href="#"><img class="btn-icon" src="images/index/in-menu-btn-1.png"/></a>
+        <div class="bar bar-tab sub-bar no-dividing">
+            <a class="tab-item" href="#">首页</a>
+            <a class="tab-item" href="#">发现</a>
+            <a class="tab-item" href="#">消息</a>
+            <a class="tab-item active" href="#">我的</a>
+        </div>
+    </header>
+    <div class="content">
+        <a class="fixed-btn" href="#"><img src="images/fixed-icon.png"/></a>
+        <div class="main-content">
+            <div class="card white-bg pad5">
+                <div class="list-block">
+                    <a class="btn m-color" href="#">
+                        <div class="item-inner">
+                            <div class="item-title sub-title pad5">
+                                <div class="pull-left user-icon-box">
+                                    <img class="user-icon" src="images/mine/mine-default.png"/>
+                                </div>
+                                <p class="article-title mt5 pt5 user-name"><span>潇潇</span><img class="grade-img" src="images/mine/grade.png"/></p>
+                            </div>
+                            <div class="item-after after-mt5"><i class="global-icon content-more-icon"></i></div>
+                        </div>
+                    </a>
+                    <div class="row no-gutter">
+                        <div class="col-33">
+                            <a class="btn text-center pad5 first-menu-btn" href="javascript:;"><span class="sub-title small-title">访客</span><br>122</a>
+                        </div>
+                        <div class="col-33">
+                            <a class="btn text-center pad5 first-menu-btn" href="javascript:;"><span class="sub-title small-title">关注</span><br>32</a>
+                        </div>
+                        <div class="col-33">
+                            <a class="btn text-center pad5" href="javascript:;"><span class="sub-title small-title">粉丝</span><br>12</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card white-bg">
+                <div class="list-block pl5 pr5">
+                    <a class="btn m-color" href="h5-mine-renwu.html">
+                        <div class="item-inner">
+                            <div class="item-title pad5">
+                                <img class="title-icon" src="images/mine/mine-1.png"/>任务中心
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="card white-bg">
+                <div class="list-block pl5 pr5">
+                    <a class="btn m-color" href="h5-mine-ziliao.html">
+                        <div class="item-inner">
+                            <div class="item-title pad5">
+                                <img class="title-icon" src="images/mine/mine-2.png"/>修改资料
+                            </div>
+                        </div>
+                    </a>
+                    <a class="btn m-color" href="h5-mine-dengji.html">
+                        <div class="item-inner">
+                            <div class="item-title pad5">
+                                <img class="title-icon" src="images/mine/mine-3.png"/>我的等级
+                                <span class="grade-num small-txt by-text-default">白银 LV.5</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="btn m-color" href="h5-mine-renzheng.html">
+                        <div class="item-inner">
+                            <div class="item-title pad5">
+                                <img class="title-icon" src="images/mine/mine-4.png"/>申请认证
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="card white-bg">
+                <div class="list-block pl5 pr5">
+                    <a class="btn m-color" href="javascript:;">
+                        <div class="item-inner">
+                            <div class="item-title pad5">
+                                <img class="title-icon" src="images/mine/mine-5.png"/>我的收藏
+                            </div>
+                        </div>
+                    </a>
+                    <a class="btn m-color" href="javascript:;">
+                        <div class="item-inner">
+                            <div class="item-title pad5">
+                                <img class="title-icon" src="images/mine/mine-6.png"/>我的赞
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="card white-bg">
+                <div class="list-block pl5 pr5">
+                    <a class="btn m-color" href="h5-mine-setting.html">
+                        <div class="item-inner">
+                            <div class="item-title pad5">
+                                <img class="title-icon" src="images/mine/mine-7.png"/>设置
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+</body>
+</html>

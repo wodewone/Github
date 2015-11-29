@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>任务中心</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        .con-top{
+            background: url("images/task/rw-bg.jpg") no-repeat center center;
+            background-size: cover;
+            height: 8rem;
+            padding: 1rem 0 1rem 2rem;
+        }
+        .sign-in{
+            background: url("images/task/rw-top.png") no-repeat center;
+            background-size: cover;
+            height: 6rem;
+            line-height: 6rem;
+            width: 6rem;
+        }
+        .top-tips{
+            margin-left: 6rem;
+            padding-right: 0;
+        }
+        .list-block .item-inner{
+            padding: 0;
+        }
+        .list-block .btn:last-child .item-inner:after{
+            content: '';
+            display: none;
+        }
+        .card-title{
+            margin: 0;
+            font-weight: 500;
+        }
+        .card-title .title-icon{
+            height: 0.88rem;
+            vertical-align: text-top;
+            margin-top: 0.1rem;
+            margin-right: 0.25rem;
+        }
+        .card-title .title-icon.media-padding-left-right{
+            padding: 0 0.16rem;
+        }
+        .item-inner .item-title{
+            margin-right: -1rem;
+            padding-left: 1.25rem;
+            position: relative;
+            white-space: normal;
+        }
+        .item-inner .item-title .info-icon{
+            position: absolute;
+            top: 0.55rem;
+            left: 0;
+        }
+        .info-icon{
+            width: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav no-dividing">
+        <a class="button button-link button-nav pull-left back external" href="#"><i class="global-icon header-back-icon"></i></a>
+        <a class="button button-link button-nav pull-right header-menu-btn" href="#"><i class="global-icon header-menu-icon"></i></a>
+        <h1 class="title">任务中心</h1>
+    </header>
+    <nav class="bar bar-tab footer-menu">
+        <div class="pl5 pr5 pt5">
+            <div class="sub-bar text-center pb5">
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-4.png"/><span>首页</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-3.png"/><span>发现</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-2.png"/><span>消息</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-1.png"/><span>我的</span></a>
+            </div>
+            <a class="btn title-padding text-center footer-cancel-btn" href="#">取消</a>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="main-content">
+            <div class="con-top">
+                <div class="con-inner">
+                    <a class="btn by-text-default sign-in text-center pull-left" href="javascript:;">签到</a>
+                    <div class="pad10 top-tips">
+                        <p class="no-margin small-pt by-text-default">您已连续签到5天,<br>再次签到可获得5积分</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card white-bg">
+                <div class="list-block pad5">
+                    <p class="card-title"><img class="title-icon" src="images/task/rw-t-1.png"/>日常任务</p>
+                    <a class="btn m-color" href="javascript:;">
+                        <div class="item-inner">
+                            <div class="item-title pt5 pb5">
+                                <p class="no-margin sub-title"><img class="info-icon" src="images/task/rw-1.png"/>发布1条原创观点或转发2条观点 每次2积分</p>
+                                <p class="no-margin sub-title task-num">1/15</p>
+                            </div>
+                            <div class="item-after"><i class="global-icon content-more-icon"></i></div>
+                        </div>
+                    </a>
+                    <a class="btn m-color" href="javascript:;">
+                        <div class="item-inner">
+                            <div class="item-title pt5 pb5">
+                                <p class="no-margin sub-title"><img class="info-icon" src="images/task/rw-2.png"/>点赞他人话题或观点 每次2积分</p>
+                                <p class="no-margin sub-title task-num">1/15</p>
+                            </div>
+                            <div class="item-after"><i class="global-icon content-more-icon"></i></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="card white-bg">
+                <div class="list-block pad5">
+                    <p class="card-title"><img class="title-icon media-padding-left-right" src="images/task/rw-t-2.png"/>奖励</p>
+                    <a class="btn m-color" href="javascript:;">
+                        <div class="item-inner">
+                            <div class="item-title pt5 pb5">
+                                <p class="no-margin sub-title"><img class="info-icon" src="images/task/rw-3.png"/>首次注册登录奖励100积分</p>
+                                <p class="no-margin sub-title task-num by-text-warning">已完成</p>
+                            </div>
+                            <div class="item-after"><i class="global-icon content-more-icon"></i></div>
+                        </div>
+                    </a>
+                    <a class="btn m-color" href="javascript:;">
+                        <div class="item-inner">
+                            <div class="item-title pt5 pb5">
+                                <p class="no-margin sub-title"><img class="info-icon" src="images/task/rw-4.png"/>话题被推荐奖励10分</p>
+                                <p class="no-margin sub-title task-num">0/2</p>
+                            </div>
+                            <div class="item-after"><i class="global-icon content-more-icon"></i></div>
+                        </div>
+                    </a>
+                    <a class="btn m-color" href="javascript:;">
+                        <div class="item-inner">
+                            <div class="item-title pt5 pb5">
+                                <p class="no-margin sub-title"><img class="info-icon" src="images/task/rw-5.png"/>邀请好友注册奖励100分</p>
+                                <p class="no-margin sub-title task-num">0/2</p>
+                            </div>
+                            <div class="item-after"><i class="global-icon content-more-icon"></i></div>
+                        </div>
+                    </a>
+                    <a class="btn m-color" href="javascript:;">
+                        <div class="item-inner">
+                            <div class="item-title pt5 pb5">
+                                <p class="no-margin sub-title"><img class="info-icon" src="images/task/rw-6.png"/>新闻被推荐奖励10分</p>
+                                <p class="no-margin sub-title task-num">0/2</p>
+                            </div>
+                            <div class="item-after"><i class="global-icon content-more-icon"></i></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/base.js' charset='utf-8'></script>
+</body>
+</html>

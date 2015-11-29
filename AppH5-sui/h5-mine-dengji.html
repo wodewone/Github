@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>我的等级</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        .by-text-ye{
+            color: #bf9513;
+            font-size: 1.1rem;
+        }
+        .small-mt{
+            margin-bottom: -.15rem;
+        }
+        .con-top{
+            padding: 1.25rem 0;
+        }
+        .con-top .row .col-20{
+            align-items: center;
+        }
+        .grade-icon{
+            margin-top: 1rem;
+            width: 1.5rem;
+            position: relative;
+            z-index: auto;
+        }
+        .line-dividing{
+            position: relative;
+            background: none;
+        }
+        .line-dividing:before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            border-width: 0;
+            border-top-width: 1px;
+            border-style: solid;
+            border-color: inherit;
+        }
+        .user-icon{
+            padding: 0.05rem;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            width: 100%;
+            position: relative;
+            z-index: auto;
+        }
+
+        .vertical-dividing{
+            position: relative;
+        }
+        .vertical-dividing:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 15;
+            display: block;
+            height: 100%;
+            width: 1px;
+            background-color: #ddd;
+            -webkit-transform-origin: 50% 100%;
+            -ms-transform-origin: 50% 100%;
+            -o-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+        }
+        .title-icon{
+            width: 0.85rem;
+            vertical-align: inherit;
+            margin-right: 0.35rem;
+        }
+        .ji-btn .title-icon{
+            vertical-align: text-top;
+        }
+        .ji-num{
+            font-size: 1.7rem;
+        }
+        .info-title{
+            display: inline-block;
+            min-width: 40%;
+            padding-left: 12%;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav no-dividing">
+        <a class="button button-link button-nav pull-left back external" href="#"><i class="global-icon header-back-icon"></i></a>
+        <a class="button button-link button-nav pull-right header-menu-btn" href="#"><i class="global-icon header-menu-icon"></i></a>
+        <h1 class="title">我的等级</h1>
+    </header>
+    <nav class="bar bar-tab footer-menu">
+        <div class="pl5 pr5 pt5">
+            <div class="sub-bar text-center pb5">
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-4.png"/><span>首页</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-3.png"/><span>发现</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-2.png"/><span>消息</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-1.png"/><span>我的</span></a>
+            </div>
+            <a class="btn title-padding text-center footer-cancel-btn" href="#">取消</a>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="main-content">
+            <div class="m-bg con-top">
+                <div class="row no-gutter">
+                    <div class="col-20 text-center line-dividing label-warning">
+                        <img class="grade-icon m-bg" src="images/mine/grade-icon.png"/>
+                        <span class="btn by-text-warning small-txt">白银Lv.3</span>
+                    </div>
+                    <div class="col-20 text-center line-dividing label-warning">
+                        <img class="grade-icon m-bg" src="images/mine/grade-icon.png"/>
+                        <span class="btn by-text-warning small-txt">白银Lv.4</span>
+                    </div>
+                    <div class="col-20 text-center line-dividing label-warning">
+                        <img class="user-icon m-active-bg" src="images/default-icon.png"/>
+                    </div>
+                    <div class="col-20 text-center line-dividing label-warning">
+                        <img class="grade-icon m-bg" src="images/mine/grade-icon.png"/>
+                        <span class="btn by-text-warning small-txt">黄金Lv.1</span>
+                    </div>
+                    <div class="col-20 text-center line-dividing label-warning">
+                        <img class="grade-icon m-bg" src="images/mine/grade-icon.png"/>
+                        <span class="btn by-text-warning small-txt">黄金Lv.2</span>
+                    </div>
+                </div>
+                <p class="no-margin text-center by-text-warning small-title">白银Lv.5</p>
+                <p class="no-margin text-center by-text-warning small-title">13000经验值</p>
+            </div>
+            <div class="card white-bg">
+                <div class="row no-gutter dividing-after">
+                    <div class="col-50 text-center">
+                        <a class="btn m-color menu-btn pad5" href="javascript:;">
+                            <span class="btn article-title pt5 pb5"><img class="title-icon small-mt" src="images/mine/dj-1.png"/>任务中心</span>
+                        </a>
+                    </div>
+                    <div class="col-50 text-center vertical-dividing">
+                        <a class="btn m-color menu-btn pad5" href="javascript:;">
+                            <span class="btn article-title pt5 pb5"><img class="title-icon" src="images/mine/dj-2.png"/>等级说明</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row no-gutter dividing-after">
+                    <div class="col-50 text-center">
+                        <a class="btn m-color menu-btn pad5" href="javascript:;">
+                            <span class="btn article-title pt5 pb5"><img class="title-icon" src="images/mine/dj-3.png"/>好友排行</span>
+                        </a>
+                    </div>
+                    <div class="col-50 text-center vertical-dividing">
+                        <a class="btn m-color menu-btn pad5" href="javascript:;">
+                            <span class="btn article-title pt5 pb5"><img class="title-icon" src="images/mine/dj-3.png"/>全站排行</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card white-bg">
+                <div class="row no-gutter dividing-after">
+                    <div class="col-50">
+                        <a class="btn m-color ji-btn pt5 pb5 text-center" href="javascript:;">
+                            <p class="no-margin pt5"><img class="title-icon " src="images/mine/money.png"/>当前积分</p>
+                            <p class="no-margin ji-num by-text-ye">12000</p>
+                        </a>
+                    </div>
+                    <div class="col-50 vertical-dividing">
+                        <a class="btn dividing-after" href="javascript:;">
+                            <p class="no-margin pt5 pb5"><span class="info-title">消耗积分</span><span class="by-text-ye">1200</span></p>
+                        </a>
+                        <a class="btn" href="javascript:;">
+                            <p class="no-margin pt5 pb5"><span class="info-title">总积分</span><span class="by-text-ye">12360</span></p>
+                        </a>
+                    </div>
+                </div>
+                <a class="btn m-color pad10 text-center article-title" href="javascript:;">积分记录 >></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/base.js' charset='utf-8'></script>
+</body>
+</html>
