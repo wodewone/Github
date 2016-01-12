@@ -468,6 +468,19 @@ a.search-btn, a.button.search-btn{
     transform: scale(2, 2);
     -webkit-transform: scale(2, 2);
 }
+.popup-filter{
+    background: rgba(36,41,48,0.88);
+    top: auto;
+    bottom: 0;
+    height: auto;
+    max-height: 100%;
+}
+.popup-filter ~ .popup-overlay{
+    opacity: 0;
+}
+.popup-filter .page, .popup-filter .page .content{
+    background: none;
+}
 
 /*    2015-11-16   */
 .no-content{
@@ -491,4 +504,17 @@ a.search-btn, a.button.search-btn{
     background: url("../images/admin-icon.png") no-repeat;
     background-size: 100%;
     z-index: 999;
+}
+.flag-dot{
+    display: block;
+    width: .25rem;
+    height: .25rem;
+    background: #ffc40e;
+    border-radius: 50%;
+    position: absolute;
+    top: .25rem;
+    right: 25%;
+}
+.tab-item.active .flag-dot{
+    display: none;
 }

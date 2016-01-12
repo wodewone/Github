@@ -1,0 +1,222 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>长观点详情</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        .user-icon-box{
+            position: relative;
+        }
+        .user-icon-box:after{
+            content: '';
+            position: absolute;
+            bottom: 0.1rem;
+            right: 0;
+            width: 0.85rem;
+            height: 0.85rem;
+            background: url("images/mine/vip.png") no-repeat;
+            background-size: 100%;
+        }
+        .user-icon{
+            width: 2rem;
+            height: 2rem;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+        }
+        .header-title{
+            font-weight: 400;
+        }
+        .article-img{
+            width: 100%;
+        }
+        .time-title{
+            font-size: 0.6rem;
+            color: #999;
+        }
+        .look-more{
+            position: absolute;
+            top: 0rem;
+            right: 0rem;
+            z-index: 9999;
+        }
+        .content-tab a.tab-item{
+            font-weight: 300;
+            color: #666;
+            border-bottom: 1px solid #ddd;
+        }
+        .content-tab a.tab-item.active{
+            border-bottom-width: 1px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left" href="javascript:;"><i class="global-icon header-back-icon"></i></a>
+        <a class="button button-link button-nav pull-right header-menu-btn" href="javascript:;"><i class="global-icon header-menu-icon"></i></a>
+        <h1 class="title">长观点详情</h1>
+    </header>
+    <div class="bar bar-tab footer-bar white-bg footer-line-bar">
+        <div class="dividing"></div>
+        <a class="tab-item" href="javascript:;"><span><i class="global-icon share-icon"></i>转发</span></a>
+        <a class="tab-item open-popup" href="javascript:;" data-popup=".popup-common"><span><i class="global-icon comment-icon"></i>评论</span></a>
+        <a class="tab-item active favourite-btn" href="javascript:;"><span><i class="global-icon favourite-icon"></i>赞</span></a>
+    </div>
+    <nav class="bar bar-tab footer-menu">
+        <div class="pl5 pr5 pt5">
+            <div class="sub-bar text-center pb5">
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-4.png"/><span>首页</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-3.png"/><span>发现</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-2.png"/><span>消息</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-1.png"/><span>我的</span></a>
+            </div>
+            <a class="btn title-padding text-center footer-cancel-btn" href="#">取消</a>
+        </div>
+    </nav>
+    <div class="content">
+        <a class="fixed-btn" href="#"><img src="images/fixed-icon.png"/></a>
+        <div class="main-content">
+            <div class="card no-margin">
+                <div class="card-header no-padding">
+                    <div class="media pl5 pr5 pt5 dividing-after">
+                        <div class="media-left">
+                            <div class="user-icon-box">
+                                <img class="media-img user-icon" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>
+                            </div>
+                        </div>
+                        <div class="media-body">
+                            <div class="media-header-inner pt5">
+                                <p class="text-hidden header-title no-margin">基金大神</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content-box">
+                    <div class="card-content">
+                        <div class="card-content-inner pb5">
+                            <p class="article-title mt5">我不知道你在说什么</p>
+                            <div class="small-pt small-txt sub-title clearfix"><span class="pull-left">2015-12-15 10:53</span><span class="pull-right">阅读 22</span></div>
+                            <img class="article-img mt5" src="images/jr-default.png" alt=""/>
+                            <p class="link-weight mb-small"><span class="by-text-warning">#股票#</span>撒都 i 接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级</p>
+                        </div>
+                        <div class="pad5 clearfix">
+                            <a class="button pull-right" href="javascript:;">删除文章</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-bottom-content mt5 pl5 pr5 white-bg">
+                <div class="bar-tab bar-nav sub-bar content-tab">
+                    <a href="javascript:;" class="tab-item text-center small-title active"><span>转发22</span></a>
+                    <a href="javascript:;" class="tab-item text-center small-title"><span>评论22</span></a>
+                    <a href="javascript:;" class="tab-item text-center small-title"><span>赞22</span></a>
+                </div>
+                <div class="list-box pb5">
+                    <div class="media dividing-after pt5">
+                        <div class="media-left">
+                            <img class="media-img user-icon" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>
+                        </div>
+                        <div class="media-body pb5">
+                            <a class="btn look-more favourite-btn" href="javascript:;"><i class="global-icon favourite-icon"></i></a>
+                            <div class="media-header-inner">
+                                <p class="text-hidden header-title no-margin">基金大神</p>
+                                <p class="sub-title time-title no-margin">2015-11-14</p>
+                            </div>
+                            <div class="pad5 mar5"></div>
+                            <p class="no-margin common-title small-pt">转发观点</p>
+                        </div>
+                    </div>
+                    <div class="media dividing-after pt5">
+                        <div class="media-left">
+                            <img class="media-img user-icon" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>
+                        </div>
+                        <div class="media-body pb5">
+                            <a class="btn look-more favourite-btn" href="javascript:;"><i class="global-icon favourite-icon"></i></a>
+                            <div class="media-header-inner">
+                                <p class="text-hidden header-title no-margin">基金大神</p>
+                                <p class="sub-title time-title no-margin">2015-11-14</p>
+                            </div>
+                            <div class="pad5 mar5"></div>
+                            <p class="no-margin common-title small-pt">转发观点</p>
+                        </div>
+                    </div>
+                    <div class="media dividing-after pt5">
+                        <div class="media-left">
+                            <img class="media-img user-icon" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>
+                        </div>
+                        <div class="media-body pb5">
+                            <a class="btn look-more favourite-btn" href="javascript:;"><i class="global-icon favourite-icon"></i></a>
+                            <div class="media-header-inner">
+                                <p class="text-hidden header-title no-margin">基金大神</p>
+                                <p class="sub-title time-title no-margin">2015-11-14</p>
+                            </div>
+                            <div class="pad5 mar5"></div>
+                            <p class="no-margin common-title small-pt">转发观点</p>
+                        </div>
+                    </div>
+                    <div class="media dividing-after pt5">
+                        <div class="media-left">
+                            <img class="media-img user-icon" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>
+                        </div>
+                        <div class="media-body pb5">
+                            <a class="btn look-more favourite-btn" href="javascript:;"><i class="global-icon favourite-icon"></i></a>
+                            <div class="media-header-inner">
+                                <p class="text-hidden header-title no-margin">基金大神</p>
+                                <p class="sub-title time-title no-margin">2015-11-14</p>
+                            </div>
+                            <div class="pad5 mar5"></div>
+                            <p class="no-margin common-title small-pt">转发观点</p>
+                        </div>
+                    </div>
+                    <div class="media dividing-after pt5">
+                        <div class="media-left">
+                            <img class="media-img user-icon" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>
+                        </div>
+                        <div class="media-body pb5">
+                            <a class="btn look-more favourite-btn" href="javascript:;"><i class="global-icon favourite-icon"></i></a>
+                            <div class="media-header-inner">
+                                <p class="text-hidden header-title no-margin">基金大神</p>
+                                <p class="sub-title time-title no-margin">2015-11-14</p>
+                            </div>
+                            <div class="pad5 mar5"></div>
+                            <p class="no-margin common-title small-pt">转发观点</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup popup-common">
+    <div class="page" style="display: block;">
+        <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-left close-popup" href="#">取消</a>
+            <a class="button button-link button-nav pull-right" href="#">发送</a>
+            <h1 class="title has-small">回复评论<small>潇潇</small></h1>
+        </header>
+        <div class="content white-bg">
+            <div class="main-content">
+                <textarea class="control-textarea pad5" placeholder="回复评论……"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/base.js' charset='utf-8'></script>
+</body>
+</html>

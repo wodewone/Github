@@ -110,6 +110,52 @@
         #loadMore{
             background: #fff;
         }
+
+        .menu-popup{
+            background: rgba(36,41,48,0.88);
+            top: auto;
+            bottom: 0;
+            height: auto;
+            max-height: 100%;
+        }
+        .menu-popup ~ .popup-overlay{
+            opacity: 0;
+        }
+        .menu-popup .page, .menu-popup .page .content{
+            background: none;
+        }
+        .menu-box{
+            margin-bottom: .5rem;
+        }
+        .menu-link{
+            width: 1%;
+            display: table-cell;
+            text-align: center;
+            font-size: .7rem;
+        }
+        .menu-link .menu-img{
+            width: 1.5rem;
+            display: block;
+            margin: 0 auto;
+        }
+        .menu-btn{
+            line-height: 2.2rem;
+            font-size: .8rem;
+            position: relative;
+        }
+        .menu-btn:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: -webkit-radial-gradient(#ccc, rgba(0,0,0,0));
+            -webkit-transform-origin: 50% 100%;
+            -ms-transform-origin: 50% 100%;
+            -o-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+        }
     </style>
 </head>
 <body>
@@ -152,7 +198,7 @@
                                             <p class="text-hidden header-title no-margin">基金大神</p>
                                             <p class="sub-title time-title no-margin">2015-11-14</p>
                                         </div>
-                                        <a class="btn look-more" href="#"><i class="global-icon content-select-icon"></i></a>
+                                        <a class="btn look-more open-popup" data-popup=".menu-popup" href="#"><i class="global-icon content-select-icon"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -160,7 +206,11 @@
                                 <div class="card-content">
                                     <div class="card-content-inner">
                                         <p class="sub-line-clamp link-weight mb-small"><span class="by-text-warning">#股票#</span>撒都 i 接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级</p>
-                                        <img style="width: 8rem;" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg" />
+                                        <div class="row">
+                                            <div class="col-33"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg" /></div>
+                                            <div class="col-33"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg" /></div>
+                                            <div class="col-33"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg" /></div>
+                                        </div>
                                     </div>
                                     <div class="bar-tab no-margin content-tab">
                                         <a class="tab-item" href="#"><span><i class="global-icon share-icon"></i>77</span></a>
@@ -250,7 +300,7 @@
                                                 <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
                                                 <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
                                                 <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
-                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                 <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
                                                 <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
                                                 <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
                                                 <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
@@ -281,6 +331,19 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div class="popup menu-popup">
+    <div class="content-block mt5 mb5 pt5">
+        <div class="menu-box">
+            <a class="menu-link by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-4.png"/><span>首页</span></a>
+            <a class="menu-link by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-3.png"/><span>发现</span></a>
+            <a class="menu-link by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-2.png"/><span>消息</span></a>
+            <a class="menu-link by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-1.png"/><span>我的</span></a>
+        </div>
+        <a class="btn text-center by-text-default menu-btn" href="javascript:;">收藏</a>
+        <a class="btn text-center by-text-default menu-btn" href="javascript:;">举报</a>
+        <a class="btn text-center by-text-default menu-btn close-popup" href="javascript:;">取消</a>
     </div>
 </div>
 <script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
@@ -315,7 +378,7 @@
                     '                <p class="text-hidden header-title no-margin">基金大神</p>' +
                     '                <p class="sub-title time-title no-margin">2015-11-14</p>' +
                     '            </div>' +
-                    '            <a class="btn look-more" href=""><i class="global-icon content-select-icon"></i></a>' +
+                    '            <a class="btn look-more" href="#"><i class="global-icon content-select-icon"></i></a>' +
                     '        </div>' +
                     '    </div>' +
                     '</div>' +

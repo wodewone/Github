@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>聊天</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        img{
+            vertical-align: middle;
+        }
+        .bar .title{
+            left: 0;
+            width: 44%;
+            margin: 0 28%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .header-icon{
+            vertical-align: middle;
+            height: 1rem;
+            padding: 0 .25rem;
+        }
+        .content{
+            background: -webkit-linear-gradient(top, #DCD9C9, #c6d5da);
+            background: -moz-linear-gradient(top, #dcdac9, #c6d5da);
+        }
+        .edit-box{
+            padding: .5rem 1rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 99;
+        }
+        .edit-textarea{
+            font-size: .75rem;
+            padding: .25rem;
+            width: 100%;
+            resize: none;
+            height: 3.9rem;
+            background: #f2f2f2;
+            border: 1px solid #ddd;
+            vertical-align: middle;
+        }
+        .send-btn{
+            padding: .25rem 1rem;
+            -webkit-border-radius: .2rem;
+            -moz-border-radius: .2rem;
+            border-radius: .2rem;
+        }
+        .main-content{
+            height: 100%;
+            position: relative;
+            padding-top: 7rem;
+        }
+        .block-box{
+            height: 100%;
+            overflow: auto;
+        }
+        .chat-box{
+            padding: 0 1rem;
+        }
+        .time-sp{
+            color: #555;
+            display: block;
+            font-size: .7rem;
+            text-align: center;
+            padding-top: .75rem;
+        }
+        .user-icon-box {
+            margin-top: .25rem;
+        }
+        .user-icon-box .user-icon{
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        .user-msg{
+            background: #fff;
+            -webkit-border-radius: .2rem;
+            -moz-border-radius: .2rem;
+            border-radius: .2rem;
+        }
+        .user-msg:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            border-width: .5rem .6rem;
+            border-style: solid;
+            border-color: transparent;
+            border-top-color: inherit;
+        }
+        .user-name{
+            color: #666;
+            padding-top: .25rem;
+        }
+
+        .chat-box .left, .chat-box .right{
+            margin-bottom: .75rem;
+        }
+        .chat-box .left .user-icon-box{
+            float: left;
+        }
+        .chat-box .right .user-icon-box{
+            float: right;
+        }
+        .chat-box .left .user-msg{.clearfix:after {
+                                      clear: both;
+                                  }
+        .clearfix:after, .clearfix:before {
+            display: table;
+            content: " ";
+        }
+            background: #fff;
+            position: relative;
+            border-color: #fff;
+            float: left;
+        }
+        .chat-box .right .user-msg{
+            background: #feeebc;
+            position: relative;
+            border-color: #feeebc;
+            float: right;
+        }
+        .chat-box .left .user-msg-box{
+            margin-left: 3.5rem;
+        }
+        .chat-box .right .user-msg-box{
+            margin-right: 3.5rem;
+        }
+        .chat-box .left .user-msg:before{
+            content: '';
+            left: -.5rem;
+        }
+        .chat-box .right .user-msg:before{
+            content: '';
+            right: -.5rem;
+        }
+        .chat-box .left .user-name{
+            text-align: left;
+            padding-left: .35rem;
+        }
+        .chat-box .right .user-name{
+            text-align: right;
+            padding-right: .35rem;
+        }
+        .popup-notice{
+            top: 2rem;
+            background: rgba(36,41,48,0.88);
+            height: auto;
+            max-height: 100%;
+            min-height: 7.5rem;
+        }
+        .popup-notice ~ .popup-overlay{
+            opacity: 0;
+        }
+        .login-screen.modal-out, .popup-notice.modal-out{
+            -webkit-transform: translate3d(0,-150%,0);
+            transform: translate3d(0,-150%,0);
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left back external" href="#"><i class="global-icon header-back-icon"></i></a>
+        <a class="button button-link button-nav pull-right no-margin" href="h5-group-detail.html"><img class="header-icon" src="images/chat/group-info.png"/></a>
+        <a class="button button-link button-nav pull-right no-margin open-popup" data-popup=".popup-notice" href="#"><img class="header-icon" src="images/chat/group-notice.png"/></a>
+        <h1 class="title">中尊会会员交流群</h1>
+    </header>
+    <div class="content">
+        <div class="main-content">
+            <div class="edit-box white-bg dividing-after">
+                <textarea class="edit-textarea" placeholder="输入内容"></textarea>
+                <div class="overflow-hidden pt5">
+                    <a class="btn pull-right m-bg by-text-default send-btn" href="javascript:;">发送</a>
+                </div>
+            </div>
+            <div class="block-box">
+                <div class="chat-box">
+                    <span class="time-sp">2015-12-02 13:29</span>
+                    <div class="clearfix left">
+                        <div class="user-icon-box">
+                            <img class="user-icon" src="images/default-icon.png"/>
+                        </div>
+                        <div class="user-msg-box">
+                            <p class="no-margin small-title user-name">WANG</p>
+                            <div class="user-msg pad5">作为欧洲文化的摇篮，意大利曾孕育出罗马文化及伊特拉斯坎文明</div>
+                        </div>
+                    </div>
+                    <div class="clearfix right">
+                        <div class="user-icon-box">
+                            <img class="user-icon" src="images/default-icon.png"/>
+                        </div>
+                        <div class="user-msg-box">
+                            <p class="no-margin small-title user-name">WANG</p>
+                            <div class="user-msg pad5">作为欧洲文化的摇篮，意大利曾孕育出罗马文化及伊特拉斯坎文明</div>
+                        </div>
+                    </div>
+                    <span class="time-sp">2015-12-02 13:29</span>
+                    <div class="clearfix left">
+                        <div class="user-icon-box">
+                            <img class="user-icon" src="images/default-icon.png"/>
+                        </div>
+                        <div class="user-msg-box">
+                            <p class="no-margin small-title user-name">WANG</p>
+                            <div class="user-msg pad5">作为欧洲文化的摇篮，意大利曾孕育出罗马文化及伊特拉斯坎文明</div>
+                        </div>
+                    </div>
+                    <div class="clearfix right">
+                        <div class="user-icon-box">
+                            <img class="user-icon" src="images/default-icon.png"/>
+                        </div>
+                        <div class="user-msg-box">
+                            <p class="no-margin small-title user-name">WANG</p>
+                            <div class="user-msg pad5">哈哈</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup popup-notice">
+    <div class="content-block mar5">
+        <p class="by-text-default no-margin small-title">我是公告，我是公告啊，我可是公告啊啊啊啊啊</p>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/base.js' charset='utf-8'></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>会议详情</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        img{
+            vertical-align: middle;
+        }
+        .main-content .card:first-child{
+            margin-top: 0;
+        }
+        .con-title{
+            bottom: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+        }
+        .title-icon{
+            vertical-align: middle;
+            width: 0.8rem;
+            margin-right: 0.35rem;
+        }
+
+        .meet-time-line{
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+        .meet-time-line:after{
+            content: '';
+            position: absolute;
+            top: 0.45rem;
+            bottom: 0.45rem;
+            left: 4.1rem;
+            width: 1px;
+            background: #ddd;
+            -webkit-transform-origin: 50% 100%;
+            -ms-transform-origin: 50% 100%;
+            -o-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+        }
+        .line-item{
+            overflow: hidden;
+            position: relative;
+            z-index: 10;
+            margin-bottom: 0.3rem;
+        }
+        .line-item .item-left{
+            float: left;
+            width: 4.45rem;
+            min-height: 1rem;
+            font-size: 0.65rem;
+            padding-right: 0.8rem;
+            background: url("images/meet/hy-4.png") center right no-repeat;
+            background-size: 0.55rem;
+        }
+        .line-item .item-left.star{
+            background: url("images/meet/hy-3.png") center right no-repeat;
+            background-size: 0.6rem;
+        }
+        .line-item .item-right{
+            font-size: 0.65rem;
+            margin-left: 0.3rem;
+            float: left;
+        }
+        .line-item .item-right p{
+            margin: 0;
+        }
+
+        .footer-line-bar{
+            background: #3a4f6c;
+        }
+        .footer-line-bar a.tab-item span{
+            line-height: 1.4rem;
+        }
+        .label-ye{
+            background: #fdb211;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav no-dividing">
+        <a class="button button-link button-nav pull-left back external" href="#"><i class="global-icon header-back-icon"></i></a>
+        <a class="button button-link button-nav pull-right header-menu-btn" href="#"><i class="global-icon header-menu-icon"></i></a>
+        <h1 class="title">会议详情</h1>
+    </header>
+    <nav class="bar bar-tab footer-menu">
+        <div class="pl5 pr5 pt5">
+            <div class="sub-bar text-center pb5">
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-4.png"/><span>首页</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-3.png"/><span>发现</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-2.png"/><span>消息</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-1.png"/><span>我的</span></a>
+            </div>
+            <a class="btn title-padding text-center footer-cancel-btn" href="#">取消</a>
+        </div>
+    </nav>
+    <div class="bar bar-tab footer-bar footer-line-bar">
+        <div class="dividing"></div>
+        <a class="tab-item" href="#"><span class="small-title by-text-default">讨论</span></a>
+        <a class="tab-item" href="#"><span class="no-dividing small-title by-text-default">电话</span></a>
+        <a class="tab-item by-label label-ye" href="#"><span class="small-title by-text-default">立即报名</span></a>
+    </div>
+    <div class="content">
+        <a class="fixed-btn" href="#"><img src="images/fixed-icon.png"/></a>
+        <div class="main-content">
+            <div class="card white-bg">
+                <div class="con-top por">
+                    <img src="images/huati/detail-huati-bg.png"/>
+                    <div class="con-title pad5 poa">
+                        <span class="small-title by-text-default">2015新三板投资大会</span>
+                    </div>
+                </div>
+                <div class="pad5">
+                    <div class="media-padding-left-right pb5">
+                        <p class="no-margin sub-title"><img class="title-icon" src="images/meet/hy-1.png"/>地点：<span class="m-color">中国 北京</span></p>
+                        <p class="no-margin small-pt sub-title"><img class="title-icon" src="images/meet/hy-2.png"/>时间：<span class="m-color">2015年09月16日</span></p>
+                    </div>
+                    <div class="dividing pt5 pb5 media-padding-left-right">
+                        <p class="no-margin small-txt">新三板扩展了创投机构的退出方式，丰富了创投机构的投资选择，多元化了创业企业的融资渠道。注册制实施在即和新三板创业板转板年底试点等政策利好，在吸引各路投资机构的同时，也成为心生归念的中概股的抢滩登陆之地。面对“全民新三板”的热潮，如何冷静对待、理性淘金？2015新三板投资大会，众位投资大佬热议新三板“如何入、如何出”，带你深度解析新三板未来之路！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card white-bg pad5">
+                <p class="no-margin pb5 text-gray small-title">会议流程</p>
+                <div class="meet-time-line list-block">
+                    <div class="line-item">
+                        <div class="item-left star"></div>
+                        <div class="item-right">2015年09月16日 ( 星期三  上午 )</div>
+                    </div>
+                    <div class="line-item">
+                        <div class="item-left">08:00-09:00</div>
+                        <div class="item-right">来宾签到</div>
+                    </div>
+                    <div class="line-item">
+                        <div class="item-left">09:30-10:00</div>
+                        <div class="item-right">主持人开场</div>
+                    </div>
+                    <div class="line-item">
+                        <div class="item-left">10:00-10:30</div>
+                        <div class="item-right">主办方致辞<p class="text-gray">倪城东  清科集团创始人  董事长兼CEO</p></div>
+                    </div>
+                    <div class="line-item">
+                        <div class="item-left">08:00-09:00</div>
+                        <div class="item-right">演讲</div>
+                    </div>
+                    <div class="line-item">
+                        <div class="item-left">08:00-09:00</div>
+                        <div class="item-right">来宾签到</div>
+                    </div>
+                    <div class="line-item">
+                        <div class="item-left star"></div>
+                        <div class="item-right">2015年09月16日 ( 星期三  下午 )</div>
+                    </div>
+                    <div class="line-item">
+                        <div class="item-left">14:30-15:00</div>
+                        <div class="item-right">演讲3</div>
+                    </div>
+                    <div class="line-item">
+                        <div class="item-left">16:30-17:00</div>
+                        <div class="item-right">主办方结束词</div>
+                    </div>
+                    <div class="line-item">
+                        <div class="item-left star"></div>
+                        <div class="item-right">活动结束</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/base.js' charset='utf-8'></script>
+</body>
+</html>

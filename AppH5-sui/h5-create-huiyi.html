@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>发布会议</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        .btn{
+            width: 100%;
+        }
+        .list-block{
+            margin: 0.5rem 0;
+        }
+        .list-block ul:after{
+            content: '';
+            display: none;
+        }
+        .list-block .item-content{
+            padding: 0 0.7rem;
+            width: 100%;
+        }
+        .list-block .item-inner{
+            padding-right: 0;
+        }
+        .list-block .item-after{
+            max-height: 3rem;
+        }
+        .list-block .item-after .content-more-icon{
+            margin-top: 0.25rem;
+        }
+        .list-block .item-after .cover-img{
+            height: 2rem;
+        }
+        .list-block .item-img{
+            height: 0.8rem;
+            margin-right: 0.35rem;
+            vertical-align: middle;
+            margin-top: -0.25rem;
+        }
+        .global-icon{
+            align-items: flex-end;
+        }
+        .list-block .item-media.sub-sign{
+            align-self: flex-start;
+            padding-top: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left back external" href="#"><i class="global-icon header-back-icon"></i></a>
+        <a class="button button-link button-nav pull-right" href="#">发布</a>
+        <h1 class="title">发布会议</h1>
+    </header>
+    <div class="content">
+        <div class="main-content">
+            <div class="card no-margin pl5 pr5 white-bg">
+                <div class="list-block no-margin">
+                    <div class="item-inner">
+                        <div class="item-media mr5 sub-title">名称</div>
+                        <input class="item-input" type="text" placeholder="输入名称" />
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title sub-title">封面</div>
+                        <div class="item-after">
+                            <img class="cover-img" src="http://img3.imgtn.bdimg.com/it/u=482717772,228561447&fm=21&gp=0.jpg" />
+                            <i class="global-icon content-more-icon"></i>
+                        </div>
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-media mr5 sub-title">时间</div>
+                        <input class="item-input input-time" type="text" readonly placeholder="选择时间" />
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-media mr5 sub-title">地点</div>
+                        <input class="item-input" type="text" placeholder="会议地点" />
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-media mr5 sub-title sub-sign">介绍</div>
+                        <textarea class="item-input control-textarea" placeholder="会议介绍"></textarea>
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-media mr5 sub-title">议程</div>
+                        <div class="item-content">
+                            <a class="button open-popup" data-popup=".popup-about" href="javascript:;">填写议程</a>
+                        </div>
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-media mr5 sub-title">主办单位</div>
+                        <input class="item-input" type="text" placeholder="会议主办单位" />
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-media mr5 sub-title">协办单位</div>
+                        <input class="item-input" type="text" placeholder="会议协办单位" />
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-media mr5 sub-title">合作媒体</div>
+                        <input class="item-input" type="text" placeholder="会议合作媒体" />
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-media mr5 sub-title">报名电话</div>
+                        <input class="item-input" type="text" placeholder="报名电话" />
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-media mr5 sub-title">报名链接</div>
+                        <input class="item-input" type="text" placeholder="报名链接" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup popup-about">
+    <div class="page" style="display: block;">
+        <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-left close-popup" href="#"><i class="global-icon header-back-icon"></i></a>
+            <a class="button button-link button-nav pull-right close-popup" href="#">取消</a>
+            <h1 class="title">填写议程</h1>
+        </header>
+        <div class="content">
+            <div class="main-content">
+                <div class="card white-bg pl5 pr5 pb5">
+                    <div class="list-block no-margin">
+                        <div class="item-inner">
+                            <div class="item-media mr5 sub-title">上午</div>
+                        </div>
+                        <div class="meet-group">
+                            <div class="item-inner">
+                                <div class="item-media mr5 sub-title">时间</div>
+                                <input class="item-input input-time" type="text" placeholder="选择时间"/>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-media mr5 sub-title sub-sign">描述</div>
+                                <textarea class="item-input control-textarea" placeholder="描述"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="text-center btn label-warning pad5 by-text-default article-title meet-more-btn" href="javascript:;">添加更多</a>
+                </div>
+                <div class="card white-bg pl5 pr5 pb5">
+                    <div class="list-block no-margin">
+                        <div class="item-inner">
+                            <div class="item-media mr5 sub-title">下午</div>
+                        </div>
+                        <div class="meet-group">
+                            <div class="item-inner">
+                                <div class="item-media mr5 sub-title">时间</div>
+                                <input class="item-input input-time" type="text" placeholder="选择时间"/>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-media mr5 sub-title sub-sign">描述</div>
+                                <textarea class="item-input control-textarea" placeholder="描述"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="text-center btn label-warning pad5 by-text-default article-title meet-more-btn" href="javascript:;">添加更多</a>
+                </div>
+                <div id="meet-group-template" class="meet-group" style="display: none;">
+                    <div class="item-inner">
+                        <div class="item-media mr5 sub-title">时间</div>
+                        <input class="item-input input-time" type="text" placeholder="选择时间"/>
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-media mr5 sub-title sub-sign">描述</div>
+                        <textarea class="item-input control-textarea" placeholder="描述"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/base.js' charset='utf-8'></script>
+<script>
+    $(function(){
+        $(document).on('click',".input-time",function(){
+            $(this).datetimePicker();
+        });
+//        $(document).on('click',".input-time",function(){
+//            $(this).picker({
+//                toolbarTemplate: '<header class="bar bar-nav"><button class="button button-link pull-right close-picker">确定</button></header>',
+//                cols: [
+//                    {values : formatTime('hour')},
+//                    {values : ':'},
+//                    {values : formatTime('min')}
+//                ]
+//            });
+//        });
+        $('.meet-more-btn').on('click',function(){
+            $(this).prev().append($('#meet-group-template').clone().show());
+        });
+    });
+//    function formatTime(key){
+//        var hour = [],min = [];
+//        if(key == 'hour'){
+//            for(var i=0; i<24; i++){
+//                hour.push(i);
+//            }
+//            return hour;
+//        }
+//        if(key == 'min') {
+//            for (var i = 0; i < 60; i++) {
+//                if(i<10)i = '0'+i;
+//                min.push(i);
+//            }
+//            return min;
+//        }
+//    }
+</script>
+</body>
+</html>

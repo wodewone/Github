@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#242930">
+    <title>系统消息</title>
+    <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="style/base.css"/>
+    <link rel="stylesheet" href="style/global-icon.css"/>
+    <link rel="stylesheet" href="style/nav-header.css"/>
+    <link rel="stylesheet" href="style/media-list.css"/>
+    <style>
+        .head-title{
+            position: relative;
+        }
+        .head-title:before, .head-title:after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 16%;
+            height: 1px;
+            width: 16%;
+            background: -webkit-linear-gradient(right, #999, rgba(0,0,0,0));
+        }
+        .head-title:after{
+            content: '';
+            left: auto;
+            right: 16%;
+            background: -webkit-linear-gradient(left, #999, rgba(0,0,0,0));
+        }
+        .head-title .time-sp{
+            display: block;
+            position: relative;
+        }
+        .head-title .time-sp:before, .head-title .time-sp:after{
+            content: '';
+            position: absolute;
+            top: 43%;
+            left: 33%;
+            background: #999;
+            width: 0.2rem;
+            height: 0.2rem;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+        }
+        .head-title .time-sp:after{
+            content: '';
+            right: 33%;
+            left: auto;
+        }
+        .article-title{
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left back external" href="#"><i class="global-icon header-back-icon"></i></a>
+        <a class="button button-link button-nav pull-right header-menu-btn" href="#"><i class="global-icon header-menu-icon"></i></a>
+        <h1 class="title">系统消息</h1>
+    </header>
+    <nav class="bar bar-tab footer-menu">
+        <div class="pl5 pr5 pt5">
+            <div class="sub-bar text-center pb5">
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-4.png"/><span>首页</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-3.png"/><span>发现</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-2.png"/><span>消息</span></a>
+                <a class="tab-item by-text-warning" href="#"><img class="menu-img" src="images/menu/footer-menu-1.png"/><span>我的</span></a>
+            </div>
+            <a class="btn title-padding text-center footer-cancel-btn" href="#">取消</a>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="main-content pl5 pr5">
+            <div class="list-container">
+                <div class="mt5 pb5">
+                    <p class="no-margin text-center head-title">
+                        <i class="time-left"></i>
+                        <span class="small-title time-sp">8月20号 23:37</span>
+                        <i class="time-right"></i>
+                    </p>
+                    <div class="pt5 pl5 pr5 white-bg">
+                        <div class="overflow-hidden dividing-after pb5 media-padding-left-right">
+                            <p class="no-margin article-title">中科招商再次举牌沙河股份 持股占比超10% </p>
+                            <p class="no-margin small-pt small-txt text-gray">8月20号</p>
+                            <div class="small-pt">
+                                <img src="images/msg-img.jpg"/>
+                            </div>
+                            <p class="no-margin small-txt text-gray">中科汇通分别于7月29日、8月3日、8月4日、8月13日和8月14日以16.9元、17.63元、18.38元、24.48元和25.94元价格，通过集中竞价方式增持沙河股份。</p>
+                        </div>
+                        <a class="btn small-title text-center pad5" href="javascript:;">阅读全文 >></a>
+                    </div>
+                </div>
+                <div class="mt5 pb5">
+                    <p class="no-margin text-center head-title">
+                        <i class="time-left"></i>
+                        <span class="small-title time-sp">8月20号 23:37</span>
+                        <i class="time-right"></i>
+                    </p>
+                    <div class="pt5 pl5 pr5 white-bg">
+                        <div class="overflow-hidden dividing-after pb5 media-padding-left-right">
+                            <p class="no-margin article-title">中科招商再次举牌沙河股份 持股占比超10% </p>
+                            <p class="no-margin small-pt small-txt text-gray">8月20号</p>
+                            <div class="small-pt">
+                                <img src="images/msg-img.jpg"/>
+                            </div>
+                            <p class="no-margin small-txt text-gray">中科汇通分别于7月29日、8月3日、8月4日、8月13日和8月14日以16.9元、17.63元、18.38元、24.48元和25.94元价格，通过集中竞价方式增持沙河股份。</p>
+                        </div>
+                        <a class="btn small-title text-center pad5" href="javascript:;">阅读全文 >></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt5 pb5">
+                <a id="loadMore" class="btn sub-title pad5 text-center white-bg" href="javascript:;">加载更多</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='js/base.js' charset='utf-8'></script>
+<script>
+    $(function(){
+        $('#loadMore').on('click',function(){
+            loadMoreData();
+        });
+    });
+
+    function loadMoreData(){
+        // 模拟1s的加载过程
+        setTimeout(function () {
+            // 添加新条目
+            addItems({data:1});
+        }, 1000);
+    }
+
+    function addItems(data) {
+        // 生成新条目的HTML
+        var html = '';
+        $.each(data,function(){
+            html += '<div class="mt5 pb5">'+
+                    '    <p class="no-margin text-center head-title">'+
+                    '        <i class="time-left"></i>'+
+                    '        <span class="small-title time-sp">8月20号 23:37</span>'+
+                    '        <i class="time-right"></i>'+
+                    '    </p>'+
+                    '    <div class="pt5 pl5 pr5 white-bg">'+
+                    '        <div class="overflow-hidden dividing-after pb5 media-padding-left-right">'+
+                    '            <p class="no-margin article-title">中科招商再次举牌沙河股份 持股占比超10% </p>'+
+                    '            <p class="no-margin small-pt small-txt text-gray">8月20号</p>'+
+                    '            <div class="small-pt">'+
+                    '                <img src="images/msg-img.jpg"/>'+
+                    '            </div>'+
+                    '            <p class="no-margin small-txt text-gray">中科汇通分别于7月29日、8月3日、8月4日、8月13日和8月14日以16.9元、17.63元、18.38元、24.48元和25.94元价格，通过集中竞价方式增持沙河股份。</p>'+
+                    '        </div>'+
+                    '        <a class="btn small-title text-center pad5" href="javascript:;">阅读全文 >></a>'+
+                    '    </div>'+
+                    '</div>';
+        });
+        // 添加新条目
+        $('.list-container').append(html);
+    }
+</script>
+</body>
+</html>

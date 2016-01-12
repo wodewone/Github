@@ -7,9 +7,9 @@ $(function(){
     $('.header-menu-btn').on('click',function(event){
         event.stopPropagation();
         if($('.footer-menu').hasClass('active')){
-            $('.footer-menu').removeClass('active');
+            $('.footer-menu').hide().removeClass('active');
         }else {
-            $('.footer-menu').addClass('active');
+            $('.footer-menu').addClass('active').show();
         }
     });
     $(document).on('click', '.favourite-btn',function(e){
@@ -21,5 +21,8 @@ $(function(){
             $(this).removeClass('active');
             $.toast("已取消收藏");
         }
+    });
+    $(document).on('click','.popup-overlay',function(){
+        $.closeModal('.popup');
     });
 });

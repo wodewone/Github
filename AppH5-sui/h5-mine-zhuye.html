@@ -15,11 +15,122 @@
     <link rel="stylesheet" href="style/nav-header.css"/>
     <link rel="stylesheet" href="style/media-list.css"/>
     <style>
+        .bar{
+            background: url("images/mine/mine-bg.jpg") center top;
+        }
+        .footer-line-bar{
+            background: #242930;
+        }
+        .footer-line-bar a.tab-item span{
+            line-height: 1.4rem;
+        }
+        .user-info-box{
+            height: 10rem;
+            padding: .5rem;
+            padding-bottom: 1.5rem;
+            background: url("images/mine/mine-bg.jpg") center;
+            background-size: cover;
+        }
+        .user-icon-box{
+            width: 4rem;
+            height: 4rem;
+            margin: 0 auto;
+            border: 1px solid #ead68a;
+            padding: 3px;
+            border-radius: 50%;
+            position: relative;
+        }
+        .user-icon-box:after{
+            content: '';
+            position: absolute;
+            bottom: 0.1rem;
+            right: 0.08rem;
+            width: 0.85rem;
+            height: 0.85rem;
+            background: url("images/mine/vip.png") no-repeat center;
+            background-size: cover;
+        }
+        .user-icon-box .user-icon{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .sex-icon{
+            vertical-align: middle;
+            width: 0.85rem;
+            height: 0.85rem;
+            margin-left: 0.5rem;
+            margin-right: -1rem;
+            margin-top: -0.11rem;
+        }
+        .user-info-box .article-info{
+            color: #cdb16f;
+        }
+        .user-info-box .article-title{
+            color: #cdb16f;
+            font-size: 0.9rem;
+        }
+        .sub-bar a.tab-item{
+            color: inherit;
+        }
+        .title-icon{
+            vertical-align: middle;
+            margin-right: 0.5rem;
+            width: .85rem;
+            height: .85rem;
+        }
+        .list-block .item-inner{
+            padding: .5rem .22rem;
+        }
+        .list-block .item-media{
+            min-width: 3rem;
+        }
+        .list-block .item-media.text-desc-media{
+            align-self: flex-start;
+            padding-top: 0;
+        }
+        .list-block .item-title{
+            width: 100%;
+        }
+        .list-block .item-title.text-desc{
+            white-space: normal;
+        }
+        .media-bottom .more{
+            position: absolute;
+            top: -0.5rem;
+            background: -moz-linear-gradient(right,#f7f8f8 0,rgba(247, 248, 248, 0) 100%);
+            background: -webkit-linear-gradient(right,#f7f8f8 0,rgba(247, 248, 248, 0) 100%);
+            background: -o-linear-gradient(right,#f7f8f8 0,rgba(247, 248, 248, 0) 100%);
+            background: -ms-linear-gradient(right,#f7f8f8 0,rgba(247, 248, 248, 0) 100%);
+            background: linear-gradient(right,#f7f8f8 0,rgba(247, 248, 248, 0) 100%);
+        }
+        .user-icon{
+            width: 2rem;
+            height: 2rem;
+        }
+        .card-bottom {
+            background-color: #F7F8F8;
+        }
+        .card-bottom .media{
+            overflow: visible;
+        }
+        .card-bottom .media-bottom:before {
+            content: '';
+            top: auto;
+            bottom: 0;
+        }
+        .common-info {
+            display: block;
+            font-size: 0.6rem;
+            line-height: 0.8rem;
+            margin-top: 0;
+            margin-bottom: 0.1rem;
+        }
     </style>
 </head>
 <body>
 <div class="page">
-    <header class="bar bar-nav">
+    <header class="bar bar-nav no-dividing">
         <a class="button button-link button-nav pull-left back external" href="#"><i class="global-icon header-back-icon"></i></a>
         <a class="button button-link button-nav pull-right header-menu-btn" href="#"><i class="global-icon header-menu-icon"></i></a>
         <h1 class="title">个人主页</h1>
@@ -35,8 +146,205 @@
             <a class="btn title-padding text-center footer-cancel-btn" href="#">取消</a>
         </div>
     </nav>
+    <div class="bar bar-tab footer-bar footer-line-bar">
+        <div class="dividing"></div>
+        <a class="tab-item" href="#"><span class="small-title by-text-default">关注</span></a>
+        <a class="tab-item" href="#"><span class="no-dividing small-title by-text-default">私信</span></a>
+    </div>
     <div class="content">
         <div class="main-content">
+            <div class="user-info-box">
+                <div class="user-icon-box">
+                    <img class="user-icon" src="images/default-icon.png"/>
+                </div>
+                <div class="article-info text-center small-pt">
+                    <div class="mb5 article-title"><span>用户昵称</span><img class="sex-icon" src="images/mine/sex-girl.png"/></div>
+                    <div class="mb5"><span>关注450</span><span class="vertical-dividing ml5 pl5">粉丝430</span></div>
+                    <span>在股票市场上，具备卓越的投资眼光，创造财富神话</span>
+                </div>
+            </div>
+            <div class="bar-tab sub-bar white-bg no-dividing pl5 pr5 m-color">
+                <a class="tab-item tab-link active" href="#tab1">主页</a>
+                <a class="tab-item tab-link" href="#tab2">观点</a>
+            </div>
+            <div class="tabs">
+                <div id="tab1" class="tab active">
+                    <div class="card list-block white-bg pl5 pr5">
+                        <div class="item-inner pad5">
+                            <div class="item-media text-gray small-title">
+                                <img class="title-icon" src="images/mine/vip.png"/>认证
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card list-block white-bg pad5">
+                        <div class="item-inner">
+                            <div class="item-media text-gray small-title">基本资料</div>
+                            <div class="item-after"><i class="global-icon content-more-icon"></i></div>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-media text-gray small-title">备注</div>
+                            <div class="item-after"><i class="global-icon content-more-icon"></i></div>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-media text-gray small-title">就职于</div>
+                            <div class="item-title m-color small-title">华尔街（北京）经济研究所</div>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-media text-gray small-title">所在地</div>
+                            <div class="item-title m-color small-title">北京 朝阳区</div>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-media text-gray small-title text-desc-media">签名</div>
+                            <div class="item-title m-color small-title text-desc">在股票市场上，具备卓越的投资眼光，创造财富神话</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab2" class="tab">
+                    <div class="list-container">
+                        <div class="card">
+                            <div class="card-header no-padding">
+                                <div class="media pl5 pr5 pt5">
+                                    <div class="media-left">
+                                        <img class="media-img user-icon" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-header-inner">
+                                            <p class="text-hidden header-title no-margin">基金大神</p>
+                                            <p class="sub-title time-title no-margin">2015-11-14</p>
+                                        </div>
+                                        <a class="btn look-more" href="#"><i class="global-icon content-select-icon"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content-box">
+                                <div class="card-content">
+                                    <div class="card-content-inner">
+                                        <p class="sub-line-clamp link-weight mb-small"><span class="by-text-warning">#股票#</span>撒都 i 接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级</p>
+                                        <div class="row">
+                                            <div class="col-33"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg" /></div>
+                                            <div class="col-33"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg" /></div>
+                                            <div class="col-33"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg" /></div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-tab no-margin content-tab">
+                                        <a class="tab-item" href="#"><span><i class="global-icon share-icon"></i>77</span></a>
+                                        <a class="tab-item" href="#"><span><i class="global-icon comment-icon"></i>3423</span></a>
+                                        <a class="tab-item favourite-btn active" href="#"><span><i class="global-icon favourite-icon"></i>153</span></a>
+                                    </div>
+                                </div>
+                                <div class="card-bottom pad5">
+                                    <div class="media pb5 media-bottom">
+                                        <div class="media-left">
+                                            <i class="global-icon favourite-on-icon"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="join-user-box">
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                            </div>
+                                            <div class="more">
+                                                <i class="global-icon content-more-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="common-box pt5 media-padding-left-right">
+                                        <p class="sub-title common-info"><a href="#">小坏蛋：</a>爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开</p>
+                                        <p class="sub-title common-info"><a href="#">小坏蛋：</a><a class="comment-link" href="#">@小明</a>爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开</p>
+                                        <p class="sub-title common-info"><a href="#">小坏蛋：</a>爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开</p>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden bottom-btn-group white-bg">
+                                    <a class="text-center title-padding sub-title look-all" href="#">查看全部 &gt; &gt;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header no-padding">
+                                <div class="media pl5 pr5 pt5">
+                                    <div class="media-left">
+                                        <img class="media-img user-icon" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-header-inner">
+                                            <p class="text-hidden header-title no-margin">基金大神</p>
+                                            <p class="sub-title time-title no-margin">2015-11-14</p>
+                                        </div>
+                                        <a class="btn look-more" href="#"><i class="global-icon content-select-icon"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content-box">
+                                <div class="card-content">
+                                    <div class="card-content-inner">
+                                        <p class="sub-line-clamp link-weight mb-small"><span class="by-text-warning">#股票#</span>撒都 i 接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级</p>
+                                        <div class="row">
+                                            <div class="col-33"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg" /></div>
+                                            <div class="col-33"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg" /></div>
+                                            <div class="col-33"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg" /></div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-tab no-margin content-tab">
+                                        <a class="tab-item" href="#"><span><i class="global-icon share-icon"></i>77</span></a>
+                                        <a class="tab-item" href="#"><span><i class="global-icon comment-icon"></i>3423</span></a>
+                                        <a class="tab-item favourite-btn active" href="#"><span><i class="global-icon favourite-icon"></i>153</span></a>
+                                    </div>
+                                </div>
+                                <div class="card-bottom pad5">
+                                    <div class="media pb5 media-bottom">
+                                        <div class="media-left">
+                                            <i class="global-icon favourite-on-icon"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="join-user-box">
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                                <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>
+                                            </div>
+                                            <div class="more">
+                                                <i class="global-icon content-more-icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="common-box pt5 media-padding-left-right">
+                                        <p class="sub-title common-info"><a href="#">小坏蛋：</a>爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开</p>
+                                        <p class="sub-title common-info"><a href="#">小坏蛋：</a><a class="comment-link" href="#">@小明</a>爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开</p>
+                                        <p class="sub-title common-info"><a href="#">小坏蛋：</a>爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开</p>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden bottom-btn-group white-bg">
+                                    <a class="text-center title-padding sub-title look-all" href="#">查看全部 &gt; &gt;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card white-bg">
+                        <a id="loadMore" class="btn sub-title pad5 text-center" href="javascript:;">加载更多</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -44,5 +352,95 @@
 <script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='js/base.js' charset='utf-8'></script>
+<script>
+    $(function(){
+        $('#loadMore').on('click',function(){
+            loadMoreData();
+        });
+    });
+
+    function loadMoreData(){
+        // 模拟1s的加载过程
+        setTimeout(function () {
+            // 添加新条目
+            addItems({data:1});
+        }, 1000);
+    }
+    function addItems(data){
+        var html = '';
+        $.each(data,function(){
+            html += '<div class="card">' +
+                    '<div class="card-header no-padding">' +
+                    '    <div class="media pl5 pr5 pt5">' +
+                    '        <div class="media-left">' +
+                    '            <img class="media-img user-icon" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>' +
+                    '        </div>' +
+                    '        <div class="media-body">' +
+                    '            <div class="media-header-inner">' +
+                    '                <p class="text-hidden header-title no-margin">基金大神</p>' +
+                    '                <p class="sub-title time-title no-margin">2015-11-14</p>' +
+                    '            </div>' +
+                    '            <a class="btn look-more" href=""><i class="global-icon content-select-icon"></i></a>' +
+                    '        </div>' +
+                    '    </div>' +
+                    '</div>' +
+                    '<div class="card-content-box">' +
+                    '    <div class="card-content">' +
+                    '        <div class="card-content-inner">' +
+                    '            <p class="sub-line-clamp link-weight mb-small"><span class="by-text-warning">#撒都阿卡到哪里去群殴塞回来#</span><span class="by-text-warning by-text-link">@股票</span>撒都 i 接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级接撒地塞大觉寺基地哦啊世界顶级</p>' +
+                    '            <div class="gd-info-box pad5">' +
+                    '                <img class="gd-img" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>' +
+                    '                <p class="gd-title text-hidden">撒短裤撒旦历历可考思考思考才能，怎么写吃牛SD 哦哦日课</p>' +
+                    '            </div>' +
+                    '        </div>' +
+                    '        <div class="bar-tab no-margin content-tab">' +
+                    '            <a class="tab-item" href="#"><span><i class="global-icon share-icon"></i>77</span></a>' +
+                    '            <a class="tab-item" href="#"><span><i class="global-icon comment-icon"></i>3423</span></a>' +
+                    '            <a class="tab-item favourite-btn" href="#"><span><i class="global-icon favourite-icon"></i>153</span></a>' +
+                    '        </div>' +
+                    '    </div>' +
+                    '    <div class="card-bottom pad5">' +
+                    '        <div class="media pb5 media-bottom">' +
+                    '            <div class="media-left">' +
+                    '                <i class="global-icon favourite-on-icon"></i>' +
+                    '            </div>' +
+                    '            <div class="media-body">' +
+                    '                <div class="join-user-box">' +
+                    '                    <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>' +
+                    '                    <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>' +
+                    '                    <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>' +
+                    '                    <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>' +
+                    '                    <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>' +
+                    '                    <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>' +
+                    '                    <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>' +
+                    '                    <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>' +
+                    '                    <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>' +
+                    '                    <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>' +
+                    '                    <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>' +
+                    '                    <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>' +
+                    '                    <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>' +
+                    '                    <a class="media-img join-user-icon mr5" href="#"><img src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"></a>' +
+                    '                </div>' +
+                    '                <div class="more">' +
+                    '                    <i class="global-icon content-more-icon"></i>' +
+                    '                </div>' +
+                    '            </div>' +
+                    '        </div>' +
+                    '        <div class="common-box pt5 media-padding-left-right">' +
+                    '            <p class="sub-title common-info"><a href="#">小坏蛋：</a>爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开</p>' +
+                    '            <p class="sub-title common-info"><a href="#">小坏蛋：</a><a class="comment-link" href="#">@小明</a>爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开</p>' +
+                    '            <p class="sub-title common-info"><a href="#">小坏蛋：</a>爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开爱丽丝电视剧尅哦问问看人家问人家科学技术滴哦湿度计法兰克福水力发电手放开</p>' +
+                    '        </div>' +
+                    '    </div>' +
+                    '    <div class="overflow-hidden bottom-btn-group white-bg">' +
+                    '        <a class="text-center title-padding sub-title look-all" href="#">查看全部 &gt; &gt;</a>' +
+                    '    </div>' +
+                    '</div>' +
+                    '</div>';
+        });
+        // 添加新条目
+        $('.list-container').append(html);
+    }
+</script>
 </body>
 </html>

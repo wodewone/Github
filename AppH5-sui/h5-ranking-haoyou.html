@@ -81,7 +81,7 @@
     <div class="content">
         <div class="main-content">
             <div class="list-block mt5 mb5 pl5 pr5 white-bg">
-                <ul>
+                <ul class="list-container">
                     <li>
                         <div class="item-inner">
                             <div class="media">
@@ -216,6 +216,9 @@
                         </div>
                     </li>
                 </ul>
+                <div class="dividing">
+                    <a id="loadMore" class="btn sub-title pad5 text-center white-bg" href="javascript:;">加载更多</a>
+                </div>
             </div>
         </div>
     </div>
@@ -224,5 +227,46 @@
 <script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='js/base.js' charset='utf-8'></script>
+<script>
+    $(function(){
+        $('#loadMore').on('click',function(){
+            loadMoreData();
+        });
+    });
+
+    function loadMoreData(){
+        // 模拟1s的加载过程
+        setTimeout(function () {
+            // 添加新条目
+            addItems({data:1});
+        }, 1000);
+    }
+    function addItems(data){
+        var html = '';
+        $.each(data,function(){
+            html += '<li>'+
+                    '    <div class="item-inner">'+
+                    '        <div class="media">'+
+                    '            <div class="media-left">'+
+                    '                <img class="media-img" src="images/default-icon.png" />'+
+                    '            </div>'+
+                    '            <div class="media-body">'+
+                    '                <div class="media-inner">'+
+                    '                    <p class="no-margin article-title">股神</p>'+
+                    '                    <p class="sub-title no-margin sub-line-clamp">按时打算来接大宋安师大萨达萨达第七集二维切 uu 哦请勿 i 饿 u 离开家年历卡记得拿快睡觉打两节课</p>'+
+                    '                </div>'+
+                    '                <a class="btn fans-num m-border-color" href="javascript:;">'+
+                    '                    <span class="num">13k</span>'+
+                    '                    <span>粉丝</span>'+
+                    '                </a>'+
+                    '            </div>'+
+                    '        </div>'+
+                    '    </div>'+
+                    '</li>';
+        });
+        // 添加新条目
+        $('.list-container').append(html);
+    }
+</script>
 </body>
 </html>

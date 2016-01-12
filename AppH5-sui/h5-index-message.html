@@ -80,12 +80,16 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /*background-color: #ddd;*/
             background-color: #999;
-            /*-webkit-transform-origin: 50% 100%;*/
-            /*-ms-transform-origin: 50% 100%;*/
-            /*-o-transform-origin: 50% 100%;*/
-            /*transform-origin: 50% 100%;*/
+        }
+        .msg-flag{
+            position: relative;
+        }
+        .msg-flag .msg-num{
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
     </style>
 </head>
@@ -161,23 +165,25 @@
                         </li>
                     </ul>
                 </div>
-                <div class="list-block">
+                <div class="list-block msg-list">
                     <ul>
                         <li class="item-content">
-                            <div class="media pt5 pb5 dividing">
-                                <a class="btn" href="javascript:;">
-                                    <div class="media-left">
-                                        <div class="user-icon-box">
-                                            <img class="media-img user-icon" src="images/default-icon.png"/>
-                                        </div>
+                        <div class="media pt5 pb5 dividing">
+                            <a class="btn" href="javascript:;">
+                                <div class="media-left">
+                                    <div class="user-icon-box msg-flag">
+                                        <img class="media-img user-icon" src="images/default-icon.png"/>
+                                        <span class="msg-num label-danger small-txt text-center">99</span>
                                     </div>
-                                    <div class="media-body">
-                                        <p class="text-gray text-hidden no-margin small-pt">爱基金<span class="pull-right text-gray small-txt">6小时前</span></p>
-                                        <p class="no-margin">好有道理的样子</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
+                                    <button class="button label-danger mt5">删除</button>
+                                </div>
+                                <div class="media-body">
+                                    <p class="text-gray text-hidden no-margin small-pt">爱基金<span class="pull-right text-gray small-txt">6小时前</span></p>
+                                    <p class="no-margin">好有道理的样子</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
                         <li class="item-content">
                             <div class="media pt5 pb5 dividing">
                                 <a class="btn" href="javascript:;">

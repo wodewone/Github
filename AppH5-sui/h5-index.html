@@ -44,7 +44,12 @@
         <a class="fixed-btn" href="#"><img src="images/fixed-icon.png"/></a>
         <div class="main-content">
             <div class="slide-box white-bg text-center">
-                <img src="images/index/slide-2.png"/>
+                <div class="index-swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="javascript:;"><img width="" src="images/index/slide-2.png"/></a></div>
+                        <div class="swiper-slide"><a href="javascript:;"><img src="images/index/slide-1.png"/></a></div>
+                    </div>
+                </div>
                 <div class="bar-tab tab-slide no-dividing">
                     <a class="tab-item text-center pad5" href="h5-huati.html"><img src="images/index/in-btn-4.png"/><span class="btn">话题</span></a>
                     <a class="tab-item text-center pad5" href="h5-guandian.html"><img src="images/index/in-btn-3.png"/><span class="btn">观点</span></a>
@@ -349,11 +354,15 @@
         var mySwiper = new Swiper('.swiper-container1',{
             pagination : '.pagination1',
             spaceBetween : 15
-        })
+        });
         var mySwiper = new Swiper('.swiper-container2',{
             pagination : '.pagination2',
             spaceBetween : 15
-        })
+        });
+        var mySwiper = new Swiper('.index-swiper-container',{
+            spaceBetween : 15,
+            autoplay : 3000,
+        });
     });
 </script>
 </body>
