@@ -97,6 +97,115 @@
             font-size: 0.9rem;
             font-weight: 500;
         }
+
+        #tab3 .subscribe-btn{
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+            color: #fff;
+            padding: 0.1rem 0;
+            height: 1.6rem;
+            width: 3.4rem;
+            text-align: center;
+        }
+        #tab3 .subscribe-btn i.global-icon{
+            margin-left: -0.5rem;
+        }
+        #tab3 .subscribe-btn .cancel{
+            display: none;
+        }
+        #tab3 .subscribe-btn .sure{
+            display: block;
+        }
+        #tab3 .subscribe-btn.active{
+            background: #C9CACB;
+            border-color: #C9CACB;
+            color: #fff;
+        }
+        #tab3 .subscribe-btn.active .cancel{
+            display: block;
+        }
+        #tab3 .subscribe-btn.active .sure{
+            display: none;
+        }
+        #tab3 .subscribe-title{
+            line-height: 1.6rem;
+        }
+        #tab3 .media img.page-media-img{
+            max-width: 6rem;
+            width: 6rem;
+        }
+        #tab3 .media-left-inner{
+            position: relative;
+        }
+        #tab3 .media-tag{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 0.6rem;
+            margin: 0;
+            /*overflow-x: hidden;*/
+        }
+        #tab3 .tag-arrow{
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -0.56rem;
+            height: 100%;
+            border-color: inherit;
+            width: 0.6rem;
+            overflow: hidden;
+        }
+        #tab3 .tag-arrow:before, .tag-arrow:after{
+            content: '';
+            position: absolute;
+            top: -0.45rem;
+            right: -0.1rem;
+            width: 0;
+            border: 0.5rem solid transparent;
+            border-left-width: 0.24rem;
+            border-left-color: inherit;
+        }
+        #tab3 .tag-arrow:after{
+            content: '';
+            top: auto;
+            bottom: -0.45rem;
+        }
+        .menu-popup{
+            background: rgba(36,41,48,0.88);
+            top: auto;
+            bottom: 0;
+            height: auto;
+            max-height: 100%;
+        }
+        .menu-popup ~ .popup-overlay{
+            opacity: 0;
+        }
+        .menu-popup .page, .menu-popup .page .content{
+            background: none;
+        }
+        .menu-popup .content-block{
+            margin-top: 0;
+        }
+        .menu-btn{
+            line-height: 2.2rem;
+            font-size: .8rem;
+            position: relative;
+        }
+        .menu-btn:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: -webkit-radial-gradient(#ccc, rgba(0,0,0,0));
+            -webkit-transform-origin: 50% 100%;
+            -ms-transform-origin: 50% 100%;
+            -o-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+        }
     </style>
 </head>
 <body>
@@ -108,6 +217,7 @@
         <div class="bar sub-bar bar-tab">
             <a class="tab-item tab-link active" href="#tab1">观点列表</a>
             <a class="tab-item tab-link" href="#tab2">问答列表</a>
+            <a class="tab-item tab-link" href="#tab3">资讯列表</a>
         </div>
     </header>
     <nav class="bar bar-tab footer-menu">
@@ -234,8 +344,71 @@
                         <a id="loadMore-wd" class="btn sub-title pad5 text-center white-bg" href="javascript:;">加载更多</a>
                     </div>
                 </div>
+                <div id="tab3" class="tab">
+                    <div class="list-block">
+                        <div class="card">
+                            <div class="card-content-box">
+                                <div class="card-content pt5">
+                                    <div class="card-content-inner">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <div class="media-left-inner">
+                                                    <img class="page-media-img" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>
+                                                    <span class="media-tag label-danger by-label">基金<i class="tag-arrow"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="media-header title-padding">
+                                                    <p class="sub-line-clamp no-margin media-sub-p">晕扫地机爱是妒忌啊死哦大劫案送到家激动啊奇偶 asdasdsaasdasSD 萨达撒手大赛</p>
+                                                </div>
+                                                <div class="media-tag-group">
+                                                    <div class="row no-gutter">
+                                                        <div class="col-25 text-hidden">
+                                                            &nbsp;
+                                                        </div>
+                                                        <div class="col-25 text-hidden text-center">
+                                                            <a class="text-gray small-btn" href="#">
+                                                                <i class="global-icon favourite-icon"></i>122
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-25 text-gray text-hidden text-center">
+                                                            <a class="text-gray small-btn" href="#">
+                                                                <i class="global-icon comment-icon"></i>300
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-25 text-gray text-hidden text-center">
+                                                            <a class="text-gray small-btn open-popup" data-popup=".menu-popup" href="javascript:;">
+                                                                <i class="global-icon more-icon"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="title-padding">
+                                            <div class="header-title-row">
+                                                <div class="header-title-after">
+                                                    <a class="button mr5 m-bg m-border-color small-btn subscribe-btn" href="javascript:;"><span class="sure"><i class="global-icon content-add-icon"></i>订阅</span><span class="cancel">取消订阅</span></a>
+                                                </div>
+                                                <div class="header-title subscribe-title">扫地回家啊死哦等哈四大送点花急哦啊是大劫案松紧带书记哦 i</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+</div>
+<!-- 资讯弹出菜单 -->
+<div class="popup menu-popup">
+    <div class="content-block mb5 pt5">
+        <a class="btn text-center by-text-default menu-btn j_fav_link no-dividing" href="javascript:;">收藏</a>
+        <a class="btn text-center by-text-default menu-btn j_complain_link" href="javascript:;">举报</a>
+        <a class="btn text-center by-text-default menu-btn close-popup" href="javascript:;">取消</a>
     </div>
 </div>
 <script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
@@ -249,6 +422,9 @@
         });
         $('#loadMore-wd').on('click',function(){
             wdLoadMoreData();
+        });
+        $('#loadMore-sc').on('click',function(){
+            zxLoadMoreData();
         });
     });
 
@@ -375,6 +551,73 @@
         });
         // 添加新条目
         $('#tab2 .list-block').append(html);
+    }
+    /* --      我的资讯      -- */
+    function zxLoadMoreData(){
+        // 模拟1s的加载过程
+        setTimeout(function () {
+            // 添加新条目
+            wdAddItems({data:1});
+        }, 1000);
+    }
+    function zxAddItems(data) {
+        // 生成新条目的HTML
+        var html = '';
+        $.each(data,function(){
+            html += '<div class="card">'+
+                    '<div class="card-content-box">'+
+                    '    <div class="card-content pt5">'+
+                    '        <div class="card-content-inner">'+
+                    '            <div class="media">'+
+                    '                <div class="media-left">'+
+                    '                    <div class="media-left-inner">'+
+                    '                        <img class="page-media-img" src="http://u1.youmeiwenzi.com/2013/05/20130508220753.jpg"/>'+
+                    '                        <span class="media-tag label-danger by-label">第三套<i class="tag-arrow"></i></span>'+
+                    '                    </div>'+
+                    '                </div>'+
+                    '                <div class="media-body">'+
+                    '                    <div class="media-header title-padding">'+
+                    '                        <p class="sub-line-clamp no-margin media-sub-p">晕扫地机爱是妒忌啊死哦大劫案送到家激动啊奇偶 asdasdsaasdasSD 萨达撒手大赛</p>'+
+                    '                    </div>'+
+                    '                    <div class="media-tag-group">'+
+                    '                        <div class="row no-gutter">'+
+                    '                            <div class="col-25 text-hidden">'+
+                    '                                &nbsp;'+
+                    '                            </div>'+
+                    '                            <div class="col-25 text-hidden text-center">'+
+                    '                                <a class="text-gray small-btn" href="#">'+
+                    '                                    <i class="global-icon favourite-icon"></i>122'+
+                    '                                </a>'+
+                    '                            </div>'+
+                    '                            <div class="col-25 text-gray text-hidden text-center">'+
+                    '                                <a class="text-gray small-btn" href="#">'+
+                    '                                    <i class="global-icon comment-icon"></i>300'+
+                    '                                </a>'+
+                    '                            </div>'+
+                    '                            <div class="col-25 text-gray text-hidden text-center">'+
+                    '                                <a class="text-gray small-btn open-popup" data-popup=".menu-popup" href="javascript:;">'+
+                    '                                    <i class="global-icon more-icon"></i>'+
+                    '                                </a>'+
+                    '                            </div>'+
+                    '                        </div>'+
+                    '                    </div>'+
+                    '                </div>'+
+                    '            </div>'+
+                    '            <div class="title-padding">'+
+                    '                <div class="header-title-row">'+
+                    '                    <div class="header-title-after">'+
+                    '                        <a class="button mr5 m-bg m-border-color small-btn subscribe-btn" href="javascript:;"><span class="sure"><i class="global-icon content-add-icon"></i>订阅</span><span class="cancel">取消订阅</span></a>'+
+                    '                    </div>'+
+                    '                    <div class="header-title subscribe-title">扫地回家啊死哦等哈四大送点花急哦啊是大劫案松紧带书记哦 i</div>'+
+                    '                </div>'+
+                    '            </div>'+
+                    '        </div>'+
+                    '    </div>'+
+                    '</div>'+
+                    '</div>';
+        });
+        // 添加新条目
+        $('#tab3 .list-block').append(html);
     }
 </script>
 </body>

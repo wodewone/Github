@@ -24,7 +24,7 @@
 .favourite-icon{
     background-position: -140px 0;
 }
-.active .favourite-icon, .favourite-on-icon{
+.active > .favourite-icon, .favourite-on-icon{
     background-position: -175px 0;
 }
 .search-icon{
@@ -41,49 +41,49 @@
 .header-rm-icon{
     background-position: 0 -72px;
 }
-.active .header-rm-icon{
+.active > .header-rm-icon{
     background-position: 0 -35px;
 }
 .header-tj-icon{
     background-position: -35px -72px;
 }
-.active .header-tj-icon{
+.active > .header-tj-icon{
     background-position: -35px -35px;
 }
 .header-my-icon{
     background-position: -70px -72px;
 }
-.active .header-my-icon{
+.active > .header-my-icon{
     background-position: -70px -35px;
 }
 .header-gz-icon{
     background-position: -105px -72px;
 }
-.active .header-gz-icon{
+.active > .header-gz-icon{
     background-position: -105px -35px;
 }
 .header-all-icon{
     background-position: -140px -72px;
 }
-.active .header-all-icon{
+.active > .header-all-icon{
     background-position: -140px -35px;
 }
 .header-dy-icon{
     background-position: -175px -72px;
 }
-.active .header-dy-icon{
+.active > .header-dy-icon{
     background-position: -175px -35px;
 }
 .header-yw-icon{
     background-position: -210px -72px;
 }
-.active .header-yw-icon{
+.active > .header-yw-icon{
     background-position: -210px -35px;
 }
 .header-jx-icon{
     background-position: -245px -72px;
 }
-.active .header-jx-icon{
+.active > .header-jx-icon{
     background-position: -245px -35px;
 }
 
